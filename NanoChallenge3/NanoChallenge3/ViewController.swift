@@ -4,7 +4,7 @@
 //
 //  Created by Vinicius Gomes on 07/04/22.
 //
-import iCarousel
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,9 +16,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let titulo = "Your Test"
         title = titulo.uppercased()
+        
         btnCaderno1.layer.cornerRadius = 12
+        //72C2FC
         btnCaderno2.layer.cornerRadius = 12
+        //FFF27E
         btnCaderno3.layer.cornerRadius = 12
+        //FF7577
     
     }
 

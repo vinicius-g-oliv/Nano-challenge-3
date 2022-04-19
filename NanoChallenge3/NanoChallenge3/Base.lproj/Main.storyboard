@@ -39,7 +39,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5Y-8W-Per">
-                                                <rect key="frame" x="696" y="8" width="340" height="272"/>
+                                                <rect key="frame" x="716" y="5" width="340" height="272"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="fHd-C0-BeO"/>
                                                 </constraints>
@@ -47,14 +47,14 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="Matemática e Ciências da Natureza">
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="1" green="0.45882352941176469" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="8Kv-EU-wCP" kind="show" id="JTf-fI-BmY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
-                                                <rect key="frame" x="348" y="8" width="340" height="270"/>
+                                                <rect key="frame" x="358" y="5" width="340" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="270" id="44Z-Io-QQS"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="W42-lh-uCm"/>
@@ -64,7 +64,7 @@
 Inglês</string>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="baseBackgroundColor" red="1" green="0.45882352941176469" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="nr3-aa-xjr" kind="show" id="gHw-Jc-wgk"/>
@@ -73,17 +73,17 @@ Inglês</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1056" id="4JM-o9-St1"/>
-                                            <constraint firstAttribute="bottom" secondItem="j5Y-8W-Per" secondAttribute="bottom" constant="-2" id="Bmg-Ae-O4K"/>
+                                            <constraint firstAttribute="bottom" secondItem="j5Y-8W-Per" secondAttribute="bottom" constant="1" id="Bmg-Ae-O4K"/>
                                             <constraint firstItem="cWE-dF-e2M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jWg-bb-8zI" secondAttribute="leading" id="CfZ-0h-ieb"/>
-                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="8" symbolic="YES" id="G9E-B7-cjj"/>
-                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="leading" secondItem="cWE-dF-e2M" secondAttribute="trailing" constant="8" symbolic="YES" id="IRd-wh-nBI"/>
-                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="8" id="IfG-nE-w7F"/>
+                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="18" id="G9E-B7-cjj"/>
+                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="leading" secondItem="cWE-dF-e2M" secondAttribute="trailing" constant="18" id="IRd-wh-nBI"/>
+                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="5" id="IfG-nE-w7F"/>
                                             <constraint firstItem="cWE-dF-e2M" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="8" id="KIQ-tP-avh"/>
-                                            <constraint firstAttribute="trailing" secondItem="j5Y-8W-Per" secondAttribute="trailing" constant="20" symbolic="YES" id="LIu-JA-mur"/>
-                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="8" symbolic="YES" id="NU6-Hz-yb6"/>
-                                            <constraint firstAttribute="bottom" secondItem="hb0-0x-W5c" secondAttribute="bottom" id="NaL-l8-1K9"/>
+                                            <constraint firstAttribute="trailing" secondItem="j5Y-8W-Per" secondAttribute="trailing" id="LIu-JA-mur"/>
+                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="18" id="NU6-Hz-yb6"/>
+                                            <constraint firstAttribute="bottom" secondItem="hb0-0x-W5c" secondAttribute="bottom" constant="3" id="NaL-l8-1K9"/>
                                             <constraint firstAttribute="bottom" secondItem="cWE-dF-e2M" secondAttribute="bottom" constant="1" id="S3v-fR-qYg"/>
-                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="8" id="n72-nm-11f"/>
+                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="5" id="n72-nm-11f"/>
                                         </constraints>
                                     </view>
                                 </subviews>
