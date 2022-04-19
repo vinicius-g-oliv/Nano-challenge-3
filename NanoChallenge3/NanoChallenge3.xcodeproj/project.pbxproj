@@ -15,6 +15,7 @@
 		55452DBF27FF653B00A2B6AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */; };
 		558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E7280DEE41009759A9 /* Caderno1ViewController.swift */; };
 		558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E9280E0544009759A9 /* Caderno2ViewController.swift */; };
+		558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865EB280F2E61009759A9 /* Caderno3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		55452DC027FF653B00A2B6AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558865E7280DEE41009759A9 /* Caderno1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno1ViewController.swift; sourceTree = "<group>"; };
 		558865E9280E0544009759A9 /* Caderno2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno2ViewController.swift; sourceTree = "<group>"; };
+		558865EB280F2E61009759A9 /* Caderno3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				55452DB427FF653500A2B6AA /* SceneDelegate.swift */,
 				558865E7280DEE41009759A9 /* Caderno1ViewController.swift */,
 				558865E9280E0544009759A9 /* Caderno2ViewController.swift */,
+				558865EB280F2E61009759A9 /* Caderno3ViewController.swift */,
 				55452DB627FF653500A2B6AA /* ViewController.swift */,
 				55452DB827FF653500A2B6AA /* Main.storyboard */,
 				55452DBB27FF653B00A2B6AA /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				55452DB727FF653500A2B6AA /* ViewController.swift in Sources */,
 				558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */,
 				55452DB327FF653500A2B6AA /* AppDelegate.swift in Sources */,
+				558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */,
 				55452DB527FF653500A2B6AA /* SceneDelegate.swift in Sources */,
 				558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */,
 			);
