@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +14,20 @@
             <objects>
                 <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" maximumZoomScale="5" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-4f-8py">
-                                <rect key="frame" x="18" y="264" width="1064" height="301"/>
+                                <rect key="frame" x="18" y="264" width="378" height="301"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-bb-8zI">
                                         <rect key="frame" x="0.0" y="13" width="1056" height="278"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-dF-e2M">
-                                                <rect key="frame" x="0.0" y="8" width="340" height="269"/>
+                                                <rect key="frame" x="0.0" y="8" width="350" height="269"/>
                                                 <color key="backgroundColor" red="0.41176470588235292" green="0.60392156862745094" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="eky-Xi-0Gi"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="eky-Xi-0Gi"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Linguagens e Códigos e Ciências Humanas Espanhol" titleAlignment="center">
@@ -35,13 +36,13 @@
                                                     <color key="baseBackgroundColor" red="0.44705882352941173" green="0.76078431372549016" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="w4w-NN-uyp" kind="show" id="WuL-fT-7FT"/>
+                                                    <segue destination="w4w-NN-uyp" kind="show" id="G26-Mv-jEf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5Y-8W-Per">
-                                                <rect key="frame" x="716" y="5" width="340" height="272"/>
+                                                <rect key="frame" x="716" y="5" width="350" height="272"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="fHd-C0-BeO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="fHd-C0-BeO"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Matemática e Ciências da Natureza">
@@ -53,11 +54,11 @@
                                                     <segue destination="8Kv-EU-wCP" kind="show" id="JTf-fI-BmY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
-                                                <rect key="frame" x="358" y="5" width="340" height="270"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
+                                                <rect key="frame" x="358" y="4" width="350" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="270" id="44Z-Io-QQS"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="W42-lh-uCm"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="W42-lh-uCm"/>
                                                 </constraints>
                                                 <buttonConfiguration key="configuration" style="gray" titleAlignment="center">
                                                     <string key="title">Linguagens e Códigos e Ciências Humanas
@@ -75,12 +76,12 @@ Inglês</string>
                                             <constraint firstAttribute="width" constant="1056" id="4JM-o9-St1"/>
                                             <constraint firstAttribute="bottom" secondItem="j5Y-8W-Per" secondAttribute="bottom" constant="1" id="Bmg-Ae-O4K"/>
                                             <constraint firstItem="cWE-dF-e2M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jWg-bb-8zI" secondAttribute="leading" id="CfZ-0h-ieb"/>
-                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="18" id="G9E-B7-cjj"/>
-                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="leading" secondItem="cWE-dF-e2M" secondAttribute="trailing" constant="18" id="IRd-wh-nBI"/>
+                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="8" id="G9E-B7-cjj"/>
+                                            <constraint firstItem="hb0-0x-W5c" firstAttribute="leading" secondItem="cWE-dF-e2M" secondAttribute="trailing" constant="8" id="IRd-wh-nBI"/>
                                             <constraint firstItem="hb0-0x-W5c" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="5" id="IfG-nE-w7F"/>
                                             <constraint firstItem="cWE-dF-e2M" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="8" id="KIQ-tP-avh"/>
-                                            <constraint firstAttribute="trailing" secondItem="j5Y-8W-Per" secondAttribute="trailing" id="LIu-JA-mur"/>
-                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="18" id="NU6-Hz-yb6"/>
+                                            <constraint firstAttribute="trailing" secondItem="j5Y-8W-Per" secondAttribute="trailing" constant="-10" id="LIu-JA-mur"/>
+                                            <constraint firstItem="j5Y-8W-Per" firstAttribute="leading" secondItem="hb0-0x-W5c" secondAttribute="trailing" constant="8" id="NU6-Hz-yb6"/>
                                             <constraint firstAttribute="bottom" secondItem="hb0-0x-W5c" secondAttribute="bottom" constant="3" id="NaL-l8-1K9"/>
                                             <constraint firstAttribute="bottom" secondItem="cWE-dF-e2M" secondAttribute="bottom" constant="1" id="S3v-fR-qYg"/>
                                             <constraint firstItem="j5Y-8W-Per" firstAttribute="top" secondItem="jWg-bb-8zI" secondAttribute="top" constant="5" id="n72-nm-11f"/>
@@ -95,17 +96,45 @@ Inglês</string>
                                     <constraint firstItem="jWg-bb-8zI" firstAttribute="top" secondItem="9sc-4f-8py" secondAttribute="top" constant="13" id="uug-Ue-pbd"/>
                                 </constraints>
                             </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-TA-MhC">
+                                <rect key="frame" x="0.0" y="622" width="414" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="44G-BD-QUY"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c2m-2O-670">
+                                    <size key="itemSize" width="345" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nCs-YO-gha">
+                                        <rect key="frame" x="34.5" y="0.0" width="345" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZLg-0l-Jyq">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="345" height="128"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cX1-TA-MhC" secondAttribute="bottom" id="FdU-N6-Jyt"/>
                             <constraint firstItem="9sc-4f-8py" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="LnT-R1-Fhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cX1-TA-MhC" secondAttribute="trailing" id="PZW-HT-cec"/>
+                            <constraint firstItem="cX1-TA-MhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qyz-KE-MX1"/>
                             <constraint firstItem="9sc-4f-8py" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="2" id="YKN-P9-xjk"/>
                             <constraint firstItem="9sc-4f-8py" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="xaE-ma-Y3Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0HH-QB-snq"/>
                     <connections>
+                        <outlet property="CollectionViewIB" destination="cX1-TA-MhC" id="Sl3-9n-NAb"/>
                         <outlet property="btnCaderno1" destination="cWE-dF-e2M" id="hU3-Z7-5IC"/>
                         <outlet property="btnCaderno2" destination="hb0-0x-W5c" id="oe8-jW-4Oe"/>
                         <outlet property="btnCaderno3" destination="j5Y-8W-Per" id="XAm-fq-CB9"/>
@@ -119,9 +148,8 @@ Inglês</string>
         <scene sceneID="KFt-cp-BPo">
             <objects>
                 <navigationController id="q4a-NY-2AP" sceneMemberID="viewController">
-                    <size key="freeformSize" width="1100" height="896"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="n66-1Q-K2T">
-                        <rect key="frame" x="0.0" y="44" width="1100" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
@@ -138,43 +166,99 @@ Inglês</string>
             <objects>
                 <viewController id="nr3-aa-xjr" customClass="Caderno2ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vuh-gv-Ycz">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ilg-4h-EVU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="pfP-lo-SLp"/>
-                    <size key="freeformSize" width="1100" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg4-ia-xaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="-632"/>
+            <point key="canvasLocation" x="2075" y="-268"/>
         </scene>
         <!--Caderno1-->
         <scene sceneID="CBm-OM-0z3">
             <objects>
-                <viewController storyboardIdentifier="Caderno1" title="Caderno1" modalPresentationStyle="fullScreen" id="w4w-NN-uyp" customClass="Caderno1ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GlR-4h-Vq1">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
+                <viewController title="Caderno1" modalPresentationStyle="fullScreen" id="w4w-NN-uyp" customClass="Caderno1ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="GlR-4h-Vq1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXw-oF-g3z">
+                                <rect key="frame" x="102.5" y="811" width="209" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="Adicionar Novo Registro" imagePadding="10" titleAlignment="automatic"/>
+                                <connections>
+                                    <segue destination="mRO-q3-mhB" kind="show" id="Olg-J3-ZIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0TP-Le-FMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bXw-oF-g3z" firstAttribute="top" secondItem="0TP-Le-FMa" secondAttribute="top" constant="723" id="I2z-yC-kq9"/>
+                            <constraint firstItem="bXw-oF-g3z" firstAttribute="centerX" secondItem="0TP-Le-FMa" secondAttribute="centerX" id="ZWu-tM-kbf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iGW-D3-yhY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEc-Ve-ghW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="47"/>
+            <point key="canvasLocation" x="1012" y="-668"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="6Fx-ui-Mwf">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="mRO-q3-mhB" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QxL-4M-v9n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VQx-lx-Uhx">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VQx-lx-Uhx" id="ntp-Ag-Kkj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mRO-q3-mhB" id="gD4-3P-il7"/>
+                            <outlet property="delegate" destination="mRO-q3-mhB" id="rmZ-P2-BcA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="oxb-71-BYP">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="1KJ-gf-CLw"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59y-xG-EYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2943" y="-1430"/>
         </scene>
         <!--Caderno3 View Controller-->
         <scene sceneID="NKo-Td-eYJ">
             <objects>
                 <viewController id="8Kv-EU-wCP" customClass="Caderno3ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAP-2W-Dic">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KL9-8l-aPv">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zBx-Qm-R09"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KL9-8l-aPv" firstAttribute="top" secondItem="zBx-Qm-R09" secondAttribute="top" constant="50" id="DVm-eL-gg6"/>
+                            <constraint firstItem="KL9-8l-aPv" firstAttribute="leading" secondItem="zBx-Qm-R09" secondAttribute="leading" id="Lff-x2-M6m"/>
+                            <constraint firstItem="zBx-Qm-R09" firstAttribute="trailing" secondItem="KL9-8l-aPv" secondAttribute="trailing" id="VMN-O8-Qwp"/>
+                            <constraint firstItem="zBx-Qm-R09" firstAttribute="bottom" secondItem="KL9-8l-aPv" secondAttribute="bottom" id="lj1-nN-Gen"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ua5-hD-QHb"/>
                 </viewController>
@@ -184,6 +268,7 @@ Inglês</string>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

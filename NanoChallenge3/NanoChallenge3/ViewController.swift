@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+   
+    @IBOutlet weak var CollectionViewIB: UICollectionView!
     @IBOutlet weak var btnCaderno1: UIButton!
-    
     @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var btnCaderno2: UIButton!
+    
+    var timer : Timer?
+    
+    var imagensEnem = [UIImage(named: "ENEM1")!,UIImage(named: "ENEM2")!,UIImage(named: "ENEM3")]
+var currentCellIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         let titulo = "Your Test"
         title = titulo.uppercased()
         
@@ -23,9 +31,12 @@ class ViewController: UIViewController {
         //FFF27E
         btnCaderno3.layer.cornerRadius = 12
         //FF7577
-    
+        
+  
     }
-
-
+ 
+    
+   
 }
+
 

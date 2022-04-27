@@ -1,18 +1,16 @@
 //
-//  Caderno1ViewController.swift
+//  MyCollection.swift
 //  NanoChallenge3
 //
-//  Created by Vinicius Gomes on 18/04/22.
+//  Created by Vinicius Gomes on 20/04/22.
 //
 
 import UIKit
 
-class Caderno1ViewController: UIViewController {
+class MyCollection: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Linguagens Ciências Humanas Espanhol"
-        
 
         // Do any additional setup after loading the view.
     }
