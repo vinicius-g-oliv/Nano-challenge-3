@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var btnCaderno2: UIButton!
     
-    var imgCar = [UIImage(named: "foto 1")!,UIImage(named: "foto 2")!,UIImage(named: "foto 3")!]
+    var imgCar = [UIImage(named: "ENEM1")!,UIImage(named: "ENEM2")!,UIImage(named: "ENEM3")!,UIImage(named: "foto 1")!,UIImage(named: "foto 2")!,UIImage(named: "foto 3")!]
     var timer : Timer?
     var currentCellIndex = 0
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     
     func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
     }
     
     @objc func moveToNextIndex(){
