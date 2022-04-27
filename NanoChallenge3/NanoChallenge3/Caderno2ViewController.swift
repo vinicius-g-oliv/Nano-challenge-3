@@ -11,6 +11,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var label: UILabel!
     
     var models: [(title: String, note: String)] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
