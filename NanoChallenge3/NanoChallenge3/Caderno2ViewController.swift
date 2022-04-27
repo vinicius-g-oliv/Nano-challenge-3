@@ -5,6 +5,7 @@ import UIKit
 class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var notas: UIButton!
     
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!

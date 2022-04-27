@@ -28,11 +28,6 @@ class ViewController: UIViewController {
         //FF7577
     
     }
-
-    //@IBAction didTapNewNote () {
-        
-    //}
-    
     
 }
 
