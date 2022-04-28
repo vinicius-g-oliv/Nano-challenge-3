@@ -1,8 +1,13 @@
-
+//
+//  Caderno3ViewController.swift
+//  NanoChallenge3
+//
+//  Created by Vinicius Gomes on 19/04/22.
+//
 
 import UIKit
 
-class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
@@ -16,13 +21,13 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
-        title = "Linguagens Ciências Humanas Inglês"
+        title = "Matemática e Ciências da Natureza"
         
         
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntryViewController3 else {
             return
         }
         vc.title = "Novo Resultado"
@@ -45,7 +50,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
         cell.detailTextLabel?.text = models[indexPath.row].note
         return cell
@@ -57,7 +62,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         let model = models[indexPath.row]
         
         // Show note controller
-        guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NoteViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "note3") as? NoteViewController3 else {
             return
         }
         vc.navigationItem.largeTitleDisplayMode = .never
@@ -73,3 +78,8 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
 }
+
+
+
+
+

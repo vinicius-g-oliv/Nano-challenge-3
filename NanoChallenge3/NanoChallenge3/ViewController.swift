@@ -29,9 +29,7 @@ class ViewController: UIViewController {
     
     }
 
-    //@IBAction didTapNewNote () {
-        
-    //}
+ 
     
     
 }
