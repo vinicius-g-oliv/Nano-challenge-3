@@ -9,6 +9,7 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
+    @IBOutlet weak var Acertis: UIView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var noteLabel: UITextView!
 
@@ -17,6 +18,7 @@ class NoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Acertis.layer.cornerRadius = 10
         titleLabel.text = noteTitle
         noteLabel.text = note
     }

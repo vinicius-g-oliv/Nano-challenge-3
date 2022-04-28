@@ -24,10 +24,16 @@ class EntryViewController: UIViewController {
     }
     
     @objc func didTapSave() {
-        if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
-            completion?(text, noteField.text)
+    
+        if let Nota = titleField.text {
+            if ((!Nota.isEmpty && noteField.text.isEmpty) || (!Nota.isEmpty && !noteField.text.isEmpty)) {
+                completion?(Nota, noteField.text)
+          
+            }else {
+                print("deu")
+            }
         }
+       }
     }
 
 
-}

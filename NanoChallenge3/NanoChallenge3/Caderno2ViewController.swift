@@ -48,6 +48,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+       
         cell.textLabel?.text = models[indexPath.row].title
         cell.detailTextLabel?.text = models[indexPath.row].note
         return cell

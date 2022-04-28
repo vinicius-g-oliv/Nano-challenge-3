@@ -9,10 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var table: UITableView!
+//    @IBOutlet var table: UITableView!
     
     @IBOutlet weak var btnCaderno1: UIButton!
-    
     @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var btnCaderno2: UIButton!
     override func viewDidLoad() {
