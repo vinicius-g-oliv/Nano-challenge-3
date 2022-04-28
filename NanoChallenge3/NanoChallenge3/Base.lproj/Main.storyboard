@@ -147,9 +147,8 @@ Inglês</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="15" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
                                 <rect key="frame" x="0.0" y="88" width="1100" height="688"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="24" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="tEK-hU-2et" rowHeight="92" style="IBUITableViewCellStyleDefault" id="z59-rc-3c3">
                                         <rect key="frame" x="20" y="49.5" width="1060" height="92"/>
@@ -176,6 +175,7 @@ Inglês</string>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBO-Ig-b6y" userLabel="Novo Rg">
                                 <rect key="frame" x="10" y="792" width="290" height="50"/>
@@ -236,7 +236,7 @@ Inglês</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Wq-2q-uZ4">
+                            <textField opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Coloque um valor de 2 digitos Ex: 30" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Wq-2q-uZ4">
                                 <rect key="frame" x="10" y="119" width="394" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Twp-EB-qAQ"/>
@@ -244,20 +244,20 @@ Inglês</string>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfP-jq-kP3">
-                                <rect key="frame" x="10" y="219" width="394" height="157"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="PfP-jq-kP3">
+                                <rect key="frame" x="10" y="219" width="394" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U62-GS-KwV"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="U62-GS-KwV" firstAttribute="bottom" secondItem="PfP-jq-kP3" secondAttribute="bottom" constant="486" id="1Eu-yc-Zk6"/>
+                            <constraint firstItem="U62-GS-KwV" firstAttribute="bottom" secondItem="PfP-jq-kP3" secondAttribute="bottom" constant="513" id="1Eu-yc-Zk6"/>
                             <constraint firstItem="Zw1-2q-G3E" firstAttribute="leading" secondItem="U62-GS-KwV" secondAttribute="leading" constant="20" id="Hqd-fk-EYi"/>
+                            <constraint firstItem="PfP-jq-kP3" firstAttribute="top" secondItem="Zw1-2q-G3E" secondAttribute="bottom" constant="8" symbolic="YES" id="JkK-Fd-rRY"/>
                             <constraint firstItem="Baz-OP-aJs" firstAttribute="leading" secondItem="MNv-Aj-TqU" secondAttribute="leadingMargin" id="RkX-gF-RGe"/>
                             <constraint firstItem="6Wq-2q-uZ4" firstAttribute="leading" secondItem="U62-GS-KwV" secondAttribute="leading" constant="10" id="Swz-RZ-L5x"/>
                             <constraint firstItem="U62-GS-KwV" firstAttribute="trailing" secondItem="6Wq-2q-uZ4" secondAttribute="trailing" constant="10" id="Ui7-Ln-CT3"/>
@@ -267,7 +267,6 @@ Inglês</string>
                             <constraint firstItem="Zw1-2q-G3E" firstAttribute="top" secondItem="6Wq-2q-uZ4" secondAttribute="bottom" constant="8" symbolic="YES" id="baK-8k-Id6"/>
                             <constraint firstItem="U62-GS-KwV" firstAttribute="trailing" secondItem="Baz-OP-aJs" secondAttribute="trailing" constant="324" id="iu7-wu-W0R"/>
                             <constraint firstItem="6Wq-2q-uZ4" firstAttribute="top" secondItem="U62-GS-KwV" secondAttribute="top" constant="75" id="qMc-Wv-jCR"/>
-                            <constraint firstItem="PfP-jq-kP3" firstAttribute="top" secondItem="6Wq-2q-uZ4" secondAttribute="bottom" constant="46" id="sXx-8r-Kaj"/>
                             <constraint firstItem="PfP-jq-kP3" firstAttribute="leading" secondItem="U62-GS-KwV" secondAttribute="leading" constant="10" id="tNS-ol-sCE"/>
                             <constraint firstItem="Baz-OP-aJs" firstAttribute="top" secondItem="U62-GS-KwV" secondAttribute="top" constant="37" id="vUV-f7-DNa"/>
                         </constraints>
@@ -289,13 +288,6 @@ Inglês</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-eP-5ob">
-                                <rect key="frame" x="20" y="279" width="374" height="126"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acertos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94C-nr-AOX">
                                 <rect key="frame" x="20" y="89" width="83.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -303,7 +295,7 @@ Inglês</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anotações" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E98-Bs-Xde">
-                                <rect key="frame" x="20" y="242" width="114.5" height="29"/>
+                                <rect key="frame" x="20" y="234" width="114.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -311,10 +303,10 @@ Inglês</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRd-wa-cES">
                                 <rect key="frame" x="20" y="126" width="374" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rb-or-hsw">
-                                        <rect key="frame" x="35" y="22" width="48" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaP-9T-F4t">
+                                        <rect key="frame" x="48" y="22" width="35" height="24"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Label">
+                                            <fragment content="/ 90">
                                                 <attributes>
                                                     <font key="NSFont" metaFont="system" size="20"/>
                                                 </attributes>
@@ -322,12 +314,13 @@ Inglês</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaP-9T-F4t">
-                                        <rect key="frame" x="83" y="21" width="30" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rb-or-hsw">
+                                        <rect key="frame" x="22" y="22" width="24.5" height="24"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="/90">
+                                            <fragment content="90">
                                                 <attributes>
                                                     <font key="NSFont" metaFont="system" size="20"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -337,14 +330,21 @@ Inglês</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="KaP-9T-F4t" secondAttribute="bottom" constant="20" id="L6f-aA-S6d"/>
-                                    <constraint firstItem="8rb-or-hsw" firstAttribute="leading" secondItem="SRd-wa-cES" secondAttribute="leading" constant="35" id="QrI-gb-5PC"/>
-                                    <constraint firstAttribute="trailing" secondItem="KaP-9T-F4t" secondAttribute="trailing" constant="261" id="XgR-1j-bcs"/>
+                                    <constraint firstItem="8rb-or-hsw" firstAttribute="leading" secondItem="SRd-wa-cES" secondAttribute="leading" constant="22" id="QrI-gb-5PC"/>
+                                    <constraint firstAttribute="trailing" secondItem="KaP-9T-F4t" secondAttribute="trailing" constant="291" id="XgR-1j-bcs"/>
                                     <constraint firstAttribute="bottom" secondItem="8rb-or-hsw" secondAttribute="bottom" constant="20" id="no9-9O-Yr9"/>
-                                    <constraint firstItem="KaP-9T-F4t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8rb-or-hsw" secondAttribute="trailing" id="orr-PY-Zmk"/>
-                                    <constraint firstItem="KaP-9T-F4t" firstAttribute="top" secondItem="SRd-wa-cES" secondAttribute="top" constant="21" id="qbc-Ex-mqE"/>
+                                    <constraint firstItem="KaP-9T-F4t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8rb-or-hsw" secondAttribute="trailing" constant="-6" id="orr-PY-Zmk"/>
+                                    <constraint firstItem="KaP-9T-F4t" firstAttribute="top" secondItem="SRd-wa-cES" secondAttribute="top" constant="22" id="qbc-Ex-mqE"/>
                                     <constraint firstItem="8rb-or-hsw" firstAttribute="top" secondItem="SRd-wa-cES" secondAttribute="top" constant="22" id="s9B-Vs-4d9"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-eP-5ob">
+                                <rect key="frame" x="20" y="271" width="374" height="102"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WYS-Wd-3NG"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -354,8 +354,8 @@ Inglês</string>
                             <constraint firstItem="94C-nr-AOX" firstAttribute="top" secondItem="WYS-Wd-3NG" secondAttribute="top" constant="45" id="IFB-85-cZX"/>
                             <constraint firstItem="SRd-wa-cES" firstAttribute="top" secondItem="94C-nr-AOX" secondAttribute="bottom" constant="8" id="KfV-Nc-xC8"/>
                             <constraint firstItem="WYS-Wd-3NG" firstAttribute="trailing" secondItem="94C-nr-AOX" secondAttribute="trailing" constant="310.5" id="Pg6-BB-Grx"/>
-                            <constraint firstItem="E98-Bs-Xde" firstAttribute="top" secondItem="SRd-wa-cES" secondAttribute="bottom" constant="50" id="XEZ-rO-8u5"/>
-                            <constraint firstItem="WYS-Wd-3NG" firstAttribute="bottom" secondItem="aTj-eP-5ob" secondAttribute="bottom" constant="457" id="Xgs-bw-a4A"/>
+                            <constraint firstItem="E98-Bs-Xde" firstAttribute="top" secondItem="SRd-wa-cES" secondAttribute="bottom" constant="42" id="XEZ-rO-8u5"/>
+                            <constraint firstItem="WYS-Wd-3NG" firstAttribute="bottom" secondItem="aTj-eP-5ob" secondAttribute="bottom" constant="489" id="Xgs-bw-a4A"/>
                             <constraint firstItem="WYS-Wd-3NG" firstAttribute="trailing" secondItem="aTj-eP-5ob" secondAttribute="trailing" constant="20" id="eZu-7g-2kb"/>
                             <constraint firstItem="SRd-wa-cES" firstAttribute="leading" secondItem="WYS-Wd-3NG" secondAttribute="leading" constant="20" id="fzg-NY-LSN"/>
                             <constraint firstItem="aTj-eP-5ob" firstAttribute="leading" secondItem="WYS-Wd-3NG" secondAttribute="leading" constant="20" id="jQj-wY-fGE"/>
@@ -365,7 +365,8 @@ Inglês</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Acertis" destination="SRd-wa-cES" id="xhr-Pc-53u"/>
+                        <outlet property="Acertos" destination="SRd-wa-cES" id="wjt-2L-MrR"/>
+                        <outlet property="Anotacao" destination="aTj-eP-5ob" id="7n0-q1-4f1"/>
                         <outlet property="noteLabel" destination="aTj-eP-5ob" id="r9f-rt-eBd"/>
                         <outlet property="titleLabel" destination="8rb-or-hsw" id="fgG-YW-7Gx"/>
                     </connections>

@@ -17,6 +17,7 @@ class EntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        noteField.layer.cornerRadius = 10
         
         
         titleField.becomeFirstResponder()
@@ -30,10 +31,14 @@ class EntryViewController: UIViewController {
                 completion?(Nota, noteField.text)
           
             }else {
-                print("deu")
+                let alert = UIAlertController(title: "Atenção", message: "Preencha o campo nota", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alert, animated: true)
             }
+         
+           }
         }
-       }
+        
     }
 
 

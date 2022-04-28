@@ -42,22 +42,37 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Table
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        return view
+    }
+   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
        
-        cell.textLabel?.text = models[indexPath.row].title
-        cell.detailTextLabel?.text = models[indexPath.row].note
+        cell.textLabel?.text = models[indexPath.section].title
+        cell.detailTextLabel?.text = models[indexPath.section].note
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = models[indexPath.row]
+        let model = models[indexPath.section]
         
         // Show note controller
         guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NoteViewController else {
@@ -70,9 +85,10 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
-    
-    
-    
 }
+    
+    
+    
+    
+    
+
