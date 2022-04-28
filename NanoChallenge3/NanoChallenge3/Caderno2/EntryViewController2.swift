@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
+class EntryViewController2: UIViewController {
     
     
     @IBOutlet var titleField: UITextField!

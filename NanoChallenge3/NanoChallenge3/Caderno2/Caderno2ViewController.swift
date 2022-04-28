@@ -24,7 +24,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController2 else {
             return
         }
         vc.title = "Novo Resultado"
