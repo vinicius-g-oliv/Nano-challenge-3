@@ -453,7 +453,7 @@ Inglês</string>
                     <navigationItem key="navigationItem" title="Linguagens e Códigos Espanhol" largeTitleDisplayMode="never" id="iGW-D3-yhY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="t46-YR-RHc">
                             <connections>
-                                <action selector="didTapNewNote" destination="w4w-NN-uyp" id="v4z-Wn-Fb8"/>
+                                <action selector="didTapNewNote" destination="w4w-NN-uyp" id="c4r-HQ-D9o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
