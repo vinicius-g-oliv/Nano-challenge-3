@@ -35,7 +35,7 @@
                                                     <color key="baseBackgroundColor" red="0.44705882352941173" green="0.76078431372549016" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="w4w-NN-uyp" kind="show" id="WuL-fT-7FT"/>
+                                                    <segue destination="w4w-NN-uyp" kind="show" identifier="Linguagens e Códigos e Ciências Humanas Espanhol" id="WuL-fT-7FT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5Y-8W-Per">
@@ -50,7 +50,7 @@
                                                     <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="8Kv-EU-wCP" kind="show" id="JTf-fI-BmY"/>
+                                                    <segue destination="8Kv-EU-wCP" kind="show" identifier="Matemática e Ciências da Natureza" id="JTf-fI-BmY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
@@ -67,7 +67,10 @@ Inglês</string>
                                                     <color key="baseBackgroundColor" red="1" green="0.45882352941176469" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="nr3-aa-xjr" kind="show" id="gHw-Jc-wgk"/>
+                                                    <segue destination="nr3-aa-xjr" kind="show" id="gHw-Jc-wgk">
+                                                        <string key="identifier">Linguagens e Códigos e Ciências Humanas
+Inglês</string>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -133,7 +136,7 @@ Inglês</string>
             </objects>
             <point key="canvasLocation" x="-1813" y="47"/>
         </scene>
-        <!--Simulados-->
+        <!--Linguagens e Códigos Inglês-->
         <scene sceneID="enJ-DB-suQ">
             <objects>
                 <viewController id="nr3-aa-xjr" customClass="Caderno2ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,7 +192,9 @@ Inglês</string>
                             <constraint firstItem="KcG-4Q-V0k" firstAttribute="top" secondItem="Ilg-4h-EVU" secondAttribute="top" id="q8V-2l-SFr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Simulados" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="pfP-lo-SLp">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="pfP-lo-SLp">
+                        <string key="title">Linguagens e Códigos
+Inglês</string>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yPv-gJ-Hmh">
                             <connections>
                                 <action selector="didTapNewNote" destination="nr3-aa-xjr" id="xJo-Tc-qgh"/>
@@ -445,7 +450,7 @@ Inglês</string>
                             <constraint firstAttribute="bottomMargin" secondItem="xIw-Jf-pGq" secondAttribute="bottom" id="aOn-AZ-FbD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Simulados" largeTitleDisplayMode="never" id="iGW-D3-yhY">
+                    <navigationItem key="navigationItem" title="Linguagens e Códigos Espanhol" largeTitleDisplayMode="never" id="iGW-D3-yhY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="t46-YR-RHc">
                             <connections>
                                 <action selector="didTapNewNote" destination="w4w-NN-uyp" id="v4z-Wn-Fb8"/>
@@ -461,7 +466,7 @@ Inglês</string>
             </objects>
             <point key="canvasLocation" x="2051" y="-860"/>
         </scene>
-        <!--Simulados-->
+        <!--Matemática e Ciências da Natureza-->
         <scene sceneID="NKo-Td-eYJ">
             <objects>
                 <viewController id="8Kv-EU-wCP" customClass="Caderno3ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
@@ -517,7 +522,7 @@ Inglês</string>
                             <constraint firstAttribute="bottomMargin" secondItem="yGm-Eh-AtQ" secondAttribute="bottom" id="oUf-A3-SRk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Simulados" largeTitleDisplayMode="never" id="ua5-hD-QHb">
+                    <navigationItem key="navigationItem" title="Matemática e Ciências da Natureza" largeTitleDisplayMode="never" id="ua5-hD-QHb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ksk-aY-Upe">
                             <connections>
                                 <action selector="didTapNewNote" destination="8Kv-EU-wCP" id="7RI-QO-3Vf"/>
