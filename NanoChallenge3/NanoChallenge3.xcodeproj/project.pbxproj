@@ -17,6 +17,12 @@
 		558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E7280DEE41009759A9 /* Caderno1ViewController.swift */; };
 		558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E9280E0544009759A9 /* Caderno2ViewController.swift */; };
 		558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865EB280F2E61009759A9 /* Caderno3ViewController.swift */; };
+		6176D4A62819ACDE001086FE /* EntryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176D4A52819ACDE001086FE /* EntryViewController2.swift */; };
+		619357C5281B06ED00D5F373 /* EntryViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357C4281B06ED00D5F373 /* EntryViewController1.swift */; };
+		619357C7281B073C00D5F373 /* NoteViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357C6281B073C00D5F373 /* NoteViewController1.swift */; };
+		619357CB281B0AA200D5F373 /* EntryViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357CA281B0AA200D5F373 /* EntryViewController3.swift */; };
+		619357CD281B0ABD00D5F373 /* NoteViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357CC281B0ABD00D5F373 /* NoteViewController3.swift */; };
+		61D06CD92819BA00008C2B32 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D06CD82819BA00008C2B32 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +34,15 @@
 		55452DB927FF653500A2B6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55452DBB27FF653B00A2B6AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55452DBE27FF653B00A2B6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		55452DC027FF653B00A2B6AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558865E7280DEE41009759A9 /* Caderno1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno1ViewController.swift; sourceTree = "<group>"; };
 		558865E9280E0544009759A9 /* Caderno2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno2ViewController.swift; sourceTree = "<group>"; };
 		558865EB280F2E61009759A9 /* Caderno3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno3ViewController.swift; sourceTree = "<group>"; };
+		6176D4A52819ACDE001086FE /* EntryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController2.swift; sourceTree = "<group>"; };
+		619357C4281B06ED00D5F373 /* EntryViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController1.swift; sourceTree = "<group>"; };
+		619357C6281B073C00D5F373 /* NoteViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController1.swift; sourceTree = "<group>"; };
+		619357CA281B0AA200D5F373 /* EntryViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController3.swift; sourceTree = "<group>"; };
+		619357CC281B0ABD00D5F373 /* NoteViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController3.swift; sourceTree = "<group>"; };
+		61D06CD82819BA00008C2B32 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +77,10 @@
 			children = (
 				55452DB227FF653500A2B6AA /* AppDelegate.swift */,
 				55452DB427FF653500A2B6AA /* SceneDelegate.swift */,
-				558865E7280DEE41009759A9 /* Caderno1ViewController.swift */,
-				558865E9280E0544009759A9 /* Caderno2ViewController.swift */,
-				558865EB280F2E61009759A9 /* Caderno3ViewController.swift */,
 				55452DB627FF653500A2B6AA /* ViewController.swift */,
+				619357C22819E2B700D5F373 /* Caderno1 */,
+				619357C12819E0AC00D5F373 /* Caderno2 */,
+				619357C32819E2CA00D5F373 /* Caderno3 */,
 				55452DB827FF653500A2B6AA /* Main.storyboard */,
 				55452DBB27FF653B00A2B6AA /* Assets.xcassets */,
 				55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */,
@@ -77,6 +88,36 @@
 				0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */,
 			);
 			path = NanoChallenge3;
+			sourceTree = "<group>";
+		};
+		619357C12819E0AC00D5F373 /* Caderno2 */ = {
+			isa = PBXGroup;
+			children = (
+				558865E9280E0544009759A9 /* Caderno2ViewController.swift */,
+				6176D4A52819ACDE001086FE /* EntryViewController2.swift */,
+				61D06CD82819BA00008C2B32 /* NoteViewController.swift */,
+			);
+			path = Caderno2;
+			sourceTree = "<group>";
+		};
+		619357C22819E2B700D5F373 /* Caderno1 */ = {
+			isa = PBXGroup;
+			children = (
+				558865E7280DEE41009759A9 /* Caderno1ViewController.swift */,
+				619357C4281B06ED00D5F373 /* EntryViewController1.swift */,
+				619357C6281B073C00D5F373 /* NoteViewController1.swift */,
+			);
+			path = Caderno1;
+			sourceTree = "<group>";
+		};
+		619357C32819E2CA00D5F373 /* Caderno3 */ = {
+			isa = PBXGroup;
+			children = (
+				558865EB280F2E61009759A9 /* Caderno3ViewController.swift */,
+				619357CA281B0AA200D5F373 /* EntryViewController3.swift */,
+				619357CC281B0ABD00D5F373 /* NoteViewController3.swift */,
+			);
+			path = Caderno3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +147,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					VOltar,
+				);
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
@@ -151,10 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0517E0EA2819D25F00E2379D /* CarouselCollectionViewCell.swift in Sources */,
+				61D06CD92819BA00008C2B32 /* NoteViewController.swift in Sources */,
 				55452DB727FF653500A2B6AA /* ViewController.swift in Sources */,
 				558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */,
+				619357C5281B06ED00D5F373 /* EntryViewController1.swift in Sources */,
+				619357CD281B0ABD00D5F373 /* NoteViewController3.swift in Sources */,
+				619357C7281B073C00D5F373 /* NoteViewController1.swift in Sources */,
 				55452DB327FF653500A2B6AA /* AppDelegate.swift in Sources */,
+				619357CB281B0AA200D5F373 /* EntryViewController3.swift in Sources */,
 				558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */,
+				6176D4A62819ACDE001086FE /* EntryViewController2.swift in Sources */,
 				55452DB527FF653500A2B6AA /* SceneDelegate.swift in Sources */,
 				558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */,
 			);
