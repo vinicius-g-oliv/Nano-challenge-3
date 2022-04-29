@@ -19,8 +19,8 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
-//        table.delegate = self
-//        table.dataSource = self
+        table.delegate = self
+        table.dataSource = self
         title = "Linguagens Ciências Humanas Espanhol"
         
         

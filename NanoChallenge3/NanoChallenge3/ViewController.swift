@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
+    @IBOutlet var table: UITableView!
+    
+    @IBOutlet weak var btnCaderno1: UIButton!
+    
    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!

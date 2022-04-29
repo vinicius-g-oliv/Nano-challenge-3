@@ -11,13 +11,12 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var label: UILabel!
     
     var models: [(title: String, note: String)] = []
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
-//        table.delegate = self
-//        table.dataSource = self
+        table.delegate = self
+        table.dataSource = self
         title = "Linguagens Ciências Humanas Inglês"
         
         
