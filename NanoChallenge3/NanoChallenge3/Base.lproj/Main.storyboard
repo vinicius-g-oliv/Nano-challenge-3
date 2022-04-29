@@ -27,7 +27,6 @@
                                                 <rect key="frame" x="0.0" y="8" width="350" height="269"/>
                                                 <color key="backgroundColor" red="0.41176470588235292" green="0.60392156862745094" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="eky-Xi-0Gi"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="eky-Xi-0Gi"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -36,9 +35,6 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="0.44705882352941173" green="0.76078431372549016" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="w4w-NN-uyp" kind="show" id="WuL-fT-7FT"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c" userLabel="btnCaderno2">
                                                 <rect key="frame" x="358" y="4" width="350" height="270"/>
@@ -46,7 +42,6 @@
                                                     <constraint firstAttribute="height" constant="270" id="44Z-Io-QQS"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="W42-lh-uCm"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" titleAlignment="center">
                                                     <string key="title">Linguagens e Códigos e Ciências Humanas
 Inglês</string>
@@ -54,9 +49,6 @@ Inglês</string>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="1" green="0.45882352941176469" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="8Kv-EU-wCP" kind="show" id="JTf-fI-BmY"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5Y-8W-Per" userLabel="btnCaderno3">
                                                 <rect key="frame" x="716" y="5" width="350" height="272"/>
@@ -69,9 +61,6 @@ Inglês</string>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="nr3-aa-xjr" kind="show" id="gHw-Jc-wgk"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -185,55 +174,6 @@ Inglês</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yp-M6-RqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1813" y="47"/>
-        </scene>
-        <!--Caderno2 View Controller-->
-        <scene sceneID="enJ-DB-suQ">
-            <objects>
-                <viewController id="nr3-aa-xjr" customClass="Caderno2ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vuh-gv-Ycz">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ilg-4h-EVU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="pfP-lo-SLp"/>
-                    <size key="freeformSize" width="1100" height="896"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mg4-ia-xaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2075" y="-632"/>
-        </scene>
-        <!--Caderno1-->
-        <scene sceneID="CBm-OM-0z3">
-            <objects>
-                <viewController storyboardIdentifier="Caderno1" title="Caderno1" modalPresentationStyle="fullScreen" id="w4w-NN-uyp" customClass="Caderno1ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GlR-4h-Vq1">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0TP-Le-FMa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iGW-D3-yhY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sEc-Ve-ghW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2077" y="47"/>
-        </scene>
-        <!--Caderno3 View Controller-->
-        <scene sceneID="NKo-Td-eYJ">
-            <objects>
-                <viewController id="8Kv-EU-wCP" customClass="Caderno3ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pAP-2W-Dic">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zBx-Qm-R09"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ua5-hD-QHb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OY6-Ee-5Bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2074" y="785"/>
         </scene>
     </scenes>
     <resources>
