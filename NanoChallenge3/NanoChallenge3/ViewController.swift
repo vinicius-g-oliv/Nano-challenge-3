@@ -9,16 +9,15 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
-    @IBOutlet var table: UITableView!
     
     @IBOutlet weak var btnCaderno1: UIButton!
     
-   
+    @IBOutlet weak var btnCaderno2: UIButton!
+    @IBOutlet weak var btnCaderno3: UIButton!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var btnCaderno1: UIButton!
-    @IBOutlet weak var btnCaderno3: UIButton!
-    @IBOutlet weak var btnCaderno2: UIButton!
+
     
     var imgCar = [UIImage(named: "ENEM1")!,UIImage(named: "ENEM2")!,UIImage(named: "ENEM3")!,UIImage(named: "foto 1")!,UIImage(named: "foto 2")!,UIImage(named: "foto 3")!]
     var timer : Timer?
