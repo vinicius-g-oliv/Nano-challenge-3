@@ -59,6 +59,7 @@
 		55452DA627FF653500A2B6AA = {
 			isa = PBXGroup;
 			children = (
+				55717218281C34AA0040A4DF /* StoryBoard */,
 				55452DB127FF653500A2B6AA /* NanoChallenge3 */,
 				55452DB027FF653500A2B6AA /* Products */,
 			);
@@ -77,17 +78,31 @@
 			children = (
 				55452DB227FF653500A2B6AA /* AppDelegate.swift */,
 				55452DB427FF653500A2B6AA /* SceneDelegate.swift */,
+				0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */,
 				55452DB627FF653500A2B6AA /* ViewController.swift */,
 				619357C22819E2B700D5F373 /* Caderno1 */,
 				619357C12819E0AC00D5F373 /* Caderno2 */,
 				619357C32819E2CA00D5F373 /* Caderno3 */,
-				55452DB827FF653500A2B6AA /* Main.storyboard */,
-				55452DBB27FF653B00A2B6AA /* Assets.xcassets */,
-				55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */,
-				55452DC027FF653B00A2B6AA /* Info.plist */,
-				0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */,
+				55717219281C350C0040A4DF /* Imagens */,
 			);
 			path = NanoChallenge3;
+			sourceTree = "<group>";
+		};
+		55717218281C34AA0040A4DF /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */,
+				55452DB827FF653500A2B6AA /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		55717219281C350C0040A4DF /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				55452DBB27FF653B00A2B6AA /* Assets.xcassets */,
+			);
+			path = Imagens;
 			sourceTree = "<group>";
 		};
 		619357C12819E0AC00D5F373 /* Caderno2 */ = {
