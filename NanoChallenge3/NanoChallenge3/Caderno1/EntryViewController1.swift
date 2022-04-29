@@ -2,9 +2,7 @@
 //  EntryViewController1.swift
 //  NanoChallenge3
 //
-//  Created by Higor Crisostomo
-//  Vinicius Gomes
-//  Guilherme 
+//  Created by Higor Crisostomo on 28/04/22.
 //
 
 import UIKit

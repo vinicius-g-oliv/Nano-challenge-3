@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0517E0EA2819D25F00E2379D /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */; };
 		55452DB327FF653500A2B6AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55452DB227FF653500A2B6AA /* AppDelegate.swift */; };
 		55452DB527FF653500A2B6AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55452DB427FF653500A2B6AA /* SceneDelegate.swift */; };
 		55452DB727FF653500A2B6AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55452DB627FF653500A2B6AA /* ViewController.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		55452DAF27FF653500A2B6AA /* NanoChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55452DB227FF653500A2B6AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55452DB427FF653500A2B6AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +82,6 @@
 				55452DB827FF653500A2B6AA /* Main.storyboard */,
 				55452DBB27FF653B00A2B6AA /* Assets.xcassets */,
 				55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */,
-				55452DC027FF653B00A2B6AA /* Info.plist */,
-				0517E0E92819D25F00E2379D /* CarouselCollectionViewCell.swift */,
 			);
 			path = NanoChallenge3;
 			sourceTree = "<group>";
@@ -194,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0517E0EA2819D25F00E2379D /* CarouselCollectionViewCell.swift in Sources */,
 				61D06CD92819BA00008C2B32 /* NoteViewController.swift in Sources */,
 				55452DB727FF653500A2B6AA /* ViewController.swift in Sources */,
 				558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */,
