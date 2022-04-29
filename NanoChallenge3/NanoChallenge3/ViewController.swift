@@ -11,7 +11,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     @IBOutlet weak var btnCaderno1: UIButton!
-    
     @IBOutlet weak var btnCaderno2: UIButton!
     @IBOutlet weak var btnCaderno3: UIButton!
     
