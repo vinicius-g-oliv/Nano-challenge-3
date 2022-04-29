@@ -27,7 +27,7 @@ class EntryViewController1: UIViewController {
     
     @objc func didTapSave() {
         if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
-           // completion?(text, noteField.text)
+           completion?(text, noteField.text)
         }
     }
 

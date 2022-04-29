@@ -39,23 +39,8 @@
                                                     <segue destination="w4w-NN-uyp" kind="show" identifier="Linguagens e Códigos e Ciências Humanas Espanhol" id="WuL-fT-7FT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5Y-8W-Per">
-                                                <rect key="frame" x="716" y="5" width="340" height="272"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="fHd-C0-BeO"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Matemática e Ciências da Natureza">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="8Kv-EU-wCP" kind="show" identifier="Matemática e Ciências da Natureza" id="JTf-fI-BmY"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
-                                                <rect key="frame" x="358" y="5" width="340" height="270"/>
+                                                <rect key="frame" x="358" y="4" width="350" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="270" id="44Z-Io-QQS"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="W42-lh-uCm"/>
@@ -516,7 +501,7 @@ Inglês</string>
                     <navigationItem key="navigationItem" title="Linguagens e Códigos Espanhol" largeTitleDisplayMode="never" id="iGW-D3-yhY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="t46-YR-RHc">
                             <connections>
-                                <action selector="didTapNewNote" destination="w4w-NN-uyp" id="c4r-HQ-D9o"/>
+                                <action selector="didTapNewNote" destination="w4w-NN-uyp" id="iuJ-Eb-4QX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
