@@ -1,18 +1,18 @@
 //
-//  Caderno3ViewController.swift
+//  MyCollection.swift
 //  NanoChallenge3
 //
-//  Created by Vinicius Gomes on 19/04/22.
+//  Created by Vinicius Gomes on 20/04/22.
 //
 
 import UIKit
 
-class Caderno3ViewController: UIViewController {
+class MyCollection: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Matemática e Ciências da Natureza"
+        // Do any additional setup after loading the view.
     }
     
 
