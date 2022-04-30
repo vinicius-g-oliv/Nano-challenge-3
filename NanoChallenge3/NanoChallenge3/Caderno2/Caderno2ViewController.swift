@@ -6,7 +6,6 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBOutlet weak var notas: UIButton!
-    
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
     
@@ -55,7 +54,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         return view
     }
    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
+        return 10
     }
     func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
         return 1
@@ -68,6 +67,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         cell.detailTextLabel?.text = models[indexPath.section].note
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
