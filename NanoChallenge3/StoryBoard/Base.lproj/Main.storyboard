@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" maximumZoomScale="5" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-4f-8py">
-                                <rect key="frame" x="18" y="264" width="378" height="301"/>
+                                <rect key="frame" x="18" y="230" width="378" height="301"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-bb-8zI">
                                         <rect key="frame" x="0.0" y="13" width="1056" height="278"/>
@@ -97,12 +97,12 @@ Inglês</string>
                                 </constraints>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-tY-WUc">
-                                <rect key="frame" x="149" y="737" width="116" height="26"/>
+                                <rect key="frame" x="149" y="819" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="879-gt-0o2">
-                                <rect key="frame" x="10" y="577" width="394" height="200"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="879-gt-0o2">
+                                <rect key="frame" x="10" y="621" width="394" height="190"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DKr-Ys-ppj">
                                     <size key="itemSize" width="344" height="139"/>
@@ -112,7 +112,7 @@ Inglês</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="caroCell" id="h5M-LW-KFp" customClass="CarouselCollectionViewCell" customModule="NanoChallenge3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.5" width="344" height="139"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="344" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s1t-Er-QWt">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="139"/>
@@ -136,18 +136,36 @@ Inglês</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadernos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afL-Nw-bAt">
+                                <rect key="frame" x="18" y="190" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dicas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETJ-DG-eZP">
+                                <rect key="frame" x="20" y="581" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="9sc-4f-8py" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="LnT-R1-Fhm"/>
-                            <constraint firstItem="879-gt-0o2" firstAttribute="top" secondItem="9sc-4f-8py" secondAttribute="bottom" constant="12" id="LrW-Oh-zRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ETJ-DG-eZP" secondAttribute="trailing" constant="200" id="7JY-Zx-egq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="afL-Nw-bAt" secondAttribute="trailing" constant="22" id="Pgs-74-y6D"/>
+                            <constraint firstItem="afL-Nw-bAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="QKc-xT-BGm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfj-tY-WUc" secondAttribute="trailing" constant="149" id="THk-eK-6GV"/>
                             <constraint firstItem="9sc-4f-8py" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="2" id="YKN-P9-xjk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfj-tY-WUc" secondAttribute="bottom" constant="99" id="agQ-k8-vMM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="879-gt-0o2" secondAttribute="bottom" constant="85" id="haA-ef-VqK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfj-tY-WUc" secondAttribute="bottom" constant="17" id="agQ-k8-vMM"/>
+                            <constraint firstItem="lfj-tY-WUc" firstAttribute="top" secondItem="879-gt-0o2" secondAttribute="bottom" constant="8" id="cXT-5a-BHQ"/>
+                            <constraint firstItem="ETJ-DG-eZP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f6C-d3-3tG"/>
+                            <constraint firstItem="879-gt-0o2" firstAttribute="top" secondItem="ETJ-DG-eZP" secondAttribute="bottom" constant="10" id="gPc-OH-bTM"/>
+                            <constraint firstItem="9sc-4f-8py" firstAttribute="top" secondItem="afL-Nw-bAt" secondAttribute="bottom" constant="10" id="gjZ-9y-XMg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="879-gt-0o2" secondAttribute="trailing" constant="10" id="pTB-8s-YcS"/>
                             <constraint firstItem="lfj-tY-WUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="phO-KH-94y"/>
+                            <constraint firstItem="ETJ-DG-eZP" firstAttribute="top" secondItem="9sc-4f-8py" secondAttribute="bottom" constant="50" id="r73-Bi-3Gq"/>
+                            <constraint firstItem="afL-Nw-bAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="vrk-Lz-Z6c"/>
                             <constraint firstItem="9sc-4f-8py" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="xaE-ma-Y3Q"/>
                             <constraint firstItem="879-gt-0o2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zB5-1i-W9D"/>
                         </constraints>
@@ -191,7 +209,7 @@ Inglês</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN4-fH-00M">
-                                <rect key="frame" x="171.5" y="437.5" width="71.5" height="21"/>
+                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -543,7 +561,7 @@ Inglês</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-cV-3Ks">
-                                <rect key="frame" x="171.5" y="437.5" width="71.5" height="21"/>
+                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -607,7 +625,7 @@ Inglês</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dw-aH-nQk">
-                                <rect key="frame" x="171.5" y="438" width="71.5" height="20.5"/>
+                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
