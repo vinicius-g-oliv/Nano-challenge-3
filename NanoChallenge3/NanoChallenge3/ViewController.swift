@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var btnCaderno2: UIButton!
     
-    var imgCar = [UIImage(named: "ENEM1")!,UIImage(named: "ENEM2")!,UIImage(named: "ENEM3")!,UIImage(named: "foto 1")!,UIImage(named: "foto 2")!,UIImage(named: "foto 3")!]
+    var imgCar = [UIImage(named: "ENEM1")!,UIImage(named: "Teste")!]
     var timer : Timer?
     var currentCellIndex = 0
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         pageControl.numberOfPages = imgCar.count
-        
+      
         startTimer()
         let titulo = "Your Test"
         title = titulo.uppercased()

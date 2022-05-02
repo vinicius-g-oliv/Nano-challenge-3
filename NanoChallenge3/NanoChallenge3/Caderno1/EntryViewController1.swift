@@ -19,17 +19,26 @@ class EntryViewController1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        noteField.layer.cornerRadius = 10
         titleField.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(didTapSave))
     }
     
+    
     @objc func didTapSave() {
-        if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
-           completion?(text, noteField.text)
+    
+        if let Nota = titleField.text {
+            if ((!Nota.isEmpty && noteField.text.isEmpty) || (!Nota.isEmpty && !noteField.text.isEmpty)) {
+                completion?(Nota, noteField.text)
+          
+            }else {
+                let alert = UIAlertController(title: "Atenção", message: "Preencha o campo acertos", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alert, animated: true)
+            }
+         
+           }
         }
-    }
 
 
 }
