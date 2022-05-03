@@ -14,8 +14,11 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var Novoregistro: UIButton!
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
+   
     
-    var models: [(title: String, note: String)] = []
+    
+    var modelo: [(title: String, anotacao: String, btndata: String)] = []
+    let dataPicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +31,14 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new1") as? EntryViewController1 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new1") as? EntradaCaderno1 else {
             return
         }
         vc.title = "Novo Resultado"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { noteTitle, note in
+        vc.completion = { nota, anotacao, data in
             self.navigationController?.popViewController(animated: true)
-            self.models.append((title: noteTitle, note: note))
+            self.modelo.append((title: nota, anotacao: anotacao, btndata: data))
             self.label.isHidden = true
             self.table.isHidden = false
             
@@ -48,7 +51,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return models.count
+        return modelo.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
@@ -68,8 +71,8 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
        
-        cell.textLabel?.text = models[indexPath.section].title
-        cell.detailTextLabel?.text = models[indexPath.section].note
+        cell.textLabel?.text = modelo[indexPath.section].title
+        cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
         return cell
     }
 
@@ -77,7 +80,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = models[indexPath.section]
+        let model = modelo[indexPath.section]
         
         
         // Show note controller
@@ -86,8 +89,9 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Resultados"
-        vc.noteTitle = model.title
-        vc.note = model.note
+        vc.nota = model.title
+        vc.data = model.btndata
+        vc.anotacao = model.anotacao
         navigationController?.pushViewController(vc, animated: true)
     }
     
