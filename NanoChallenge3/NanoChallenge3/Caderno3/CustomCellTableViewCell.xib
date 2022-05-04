@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="CustomCellTableViewCell" customModule="NanoChallenge3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAs-JC-bXt">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4w-6S-n4y">
+                                <rect key="frame" x="8" y="13" width="43" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc0-2G-ekf">
+                                <rect key="frame" x="59" y="13" width="77" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="30/05/9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtO-N9-IPm">
+                                <rect key="frame" x="237" y="13" width="108" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CtO-N9-IPm" secondAttribute="trailing" constant="10" id="FvX-KC-Jou"/>
+                            <constraint firstItem="Bc0-2G-ekf" firstAttribute="leading" secondItem="A4w-6S-n4y" secondAttribute="trailing" constant="8" id="H6D-Y3-75B"/>
+                            <constraint firstItem="A4w-6S-n4y" firstAttribute="baseline" secondItem="Bc0-2G-ekf" secondAttribute="baseline" id="ILU-nT-RQx"/>
+                            <constraint firstItem="A4w-6S-n4y" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="Led-G6-QoQ"/>
+                            <constraint firstItem="CtO-N9-IPm" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="jBe-hZ-3mQ"/>
+                            <constraint firstItem="CtO-N9-IPm" firstAttribute="leading" secondItem="Bc0-2G-ekf" secondAttribute="trailing" constant="101" id="xUp-ND-0Vj"/>
+                            <constraint firstItem="A4w-6S-n4y" firstAttribute="leading" secondItem="RAs-JC-bXt" secondAttribute="leading" constant="8" id="zlR-xK-nO7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="RAs-JC-bXt" secondAttribute="trailing" id="MAi-6R-a0D"/>
+                    <constraint firstAttribute="bottom" secondItem="RAs-JC-bXt" secondAttribute="bottom" id="Q2j-uL-tha"/>
+                    <constraint firstItem="RAs-JC-bXt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ti5-K6-0V1"/>
+                    <constraint firstItem="RAs-JC-bXt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="f5U-iT-rAd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="data" destination="CtO-N9-IPm" id="sHd-Oy-FFJ"/>
+                <outlet property="fundo" destination="RAs-JC-bXt" id="qZp-7d-HXN"/>
+                <outlet property="nota" destination="A4w-6S-n4y" id="lrA-UH-ajp"/>
+            </connections>
+            <point key="canvasLocation" x="163.04347826086959" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
