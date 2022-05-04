@@ -9,19 +9,24 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
+    @IBOutlet var campoNota: UILabel!
+    @IBOutlet var campoAnotacao: UITextView!
+    @IBOutlet weak var campoData: UILabel!
     @IBOutlet weak var Acertos: UIView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var noteLabel: UITextView!
+    @IBOutlet weak var Campodata: UIView!
     @IBOutlet weak var Anotacao: UITextView!
-    public var noteTitle: String = ""
-    public var note: String = ""
+    public var nota: String = ""
+    public var anotacao: String = ""
+    public var data: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        campoData.text = data
+        campoNota.text = nota
+        campoAnotacao.text = anotacao
+        Campodata.layer.cornerRadius = 10
         Anotacao.layer.cornerRadius = 10
         Acertos.layer.cornerRadius = 10
-        titleLabel.text = noteTitle
-        noteLabel.text = note
     }
 
 

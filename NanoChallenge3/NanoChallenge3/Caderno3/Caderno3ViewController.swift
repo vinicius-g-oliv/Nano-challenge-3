@@ -15,8 +15,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var label: UILabel!
     
     @IBOutlet weak var Novoregistro: UIButton!
-    var models: [(title: String, note: String)] = []
-    
+    var modelo: [(title: String, anotacao: String, btndata: String)] = []
+    let dataPicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
@@ -28,17 +28,16 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntryViewController3 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntradaCaderno2 else {
             return
         }
         vc.title = "Novo Resultado"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { noteTitle, note in
+        vc.completion = { nota, anotacao, data in
             self.navigationController?.popViewController(animated: true)
-            self.models.append((title: noteTitle, note: note))
+            self.modelo.append((title: nota, anotacao: anotacao, btndata: data))
             self.label.isHidden = true
             self.table.isHidden = false
-            
             self.table.reloadData()
         }
         navigationController?.pushViewController(vc, animated: true)
@@ -47,7 +46,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     // Table
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return models.count
+        return modelo.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
@@ -67,8 +66,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
        
-        cell.textLabel?.text = models[indexPath.section].title
-        cell.detailTextLabel?.text = models[indexPath.section].note
+        cell.textLabel?.text = modelo[indexPath.section].title
+        cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
         return cell
     }
 
@@ -76,7 +75,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = models[indexPath.section]
+        let model = modelo[indexPath.section]
         
         // Show note controller
         guard let vc = storyboard?.instantiateViewController(identifier: "note3") as? NoteViewController3 else {
@@ -84,8 +83,9 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Resultados"
-        vc.noteTitle = model.title
-        vc.note = model.note
+        vc.nota = model.title
+        vc.anotacao = model.anotacao
+        vc.data = model.btndata
         navigationController?.pushViewController(vc, animated: true)
     }
     

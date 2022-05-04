@@ -1,26 +1,24 @@
 //
-//  EntryViewController3.swift
+//  EntryViewController.swift
 //  NanoChallenge3
 //
-//  Created by Higor Crisostomo on 28/04/22.
+//  Created by Higor Crisostomo on 27/04/22.
 //
 
 import UIKit
 
-class EntryViewController3: UIViewController {
+class EntradaCaderno2: UIViewController {
     
-    
-    @IBOutlet weak var escolhaData: UITextField!
+    @IBOutlet weak var escolherData: UITextField!
     @IBOutlet var campoNota: UITextField!
     @IBOutlet var campoAnotacao: UITextView!
     
     let datePicker = UIDatePicker()
     
     public var completion: ((String, String, String) -> Void)?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         campoAnotacao.layer.cornerRadius = 10
         campoNota.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .plain, target: self, action: #selector(didTapSave))
@@ -28,7 +26,7 @@ class EntryViewController3: UIViewController {
     }
     func createDatePicker(){
            
-        escolhaData.textAlignment = .justified
+        escolherData.textAlignment = .justified
                 
                 //toolbar
                 let  toolbar = UIToolbar()
@@ -40,10 +38,10 @@ class EntryViewController3: UIViewController {
                 toolbar.setItems([espaco,salvar], animated: true)
                 
                 //assign toolbar
-                escolhaData.inputAccessoryView = toolbar
+                escolherData.inputAccessoryView = toolbar
                 
                 //assign date picker to the text field
-                escolhaData.inputView = datePicker
+                escolherData.inputView = datePicker
                 
                 //date picker mode
                 datePicker.datePickerMode = .date
@@ -51,24 +49,24 @@ class EntryViewController3: UIViewController {
                 //Tamanho do datePicker
         datePicker.preferredDatePickerStyle = .inline
        }
+       
+       @objc func donePressed(){
+           //formatter
+           let formatter = DateFormatter()
+           formatter.dateStyle = .long
+           
+           escolherData.text = formatter.string(from: self.datePicker.date)
+           self.view.endEditing(true)
+       }
     
-    @objc func donePressed(){
-        //formatter
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        
-        escolhaData.text = formatter.string(from: self.datePicker.date)
-        self.view.endEditing(true)
-    }
- 
     
     @objc func didTapSave() {
     
         if let Nota = campoNota.text {
-            if ((!Nota.isEmpty && campoAnotacao.text.isEmpty) || (!Nota.isEmpty && !campoAnotacao.text.isEmpty) || (!Nota.isEmpty && !escolhaData.text!.isEmpty)) {
+            if ((!Nota.isEmpty && campoAnotacao.text.isEmpty) || (!Nota.isEmpty && !campoAnotacao.text.isEmpty) || (!Nota.isEmpty && !escolherData.text!.isEmpty)) {
                 let Converter:Int? = Int(campoNota.text!)
                 if (Converter! <= 90 && Converter! >= 0) {
-                    guard let data = escolhaData.text else {
+                    guard let data = escolherData.text else {
                         let data = ""
                         completion?(Nota, campoAnotacao.text, data)
                         return
@@ -87,8 +85,6 @@ class EntryViewController3: UIViewController {
                         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 present(alert, animated: true)
             }
-           }
         }
-
-
+    }
 }
