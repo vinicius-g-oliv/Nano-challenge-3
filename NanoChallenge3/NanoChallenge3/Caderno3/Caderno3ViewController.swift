@@ -70,7 +70,10 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
         return cell
     }
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+          modelo.remove(at: indexPath.section)
+          tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

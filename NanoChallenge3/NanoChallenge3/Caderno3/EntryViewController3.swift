@@ -87,8 +87,6 @@ class EntryViewController3: UIViewController {
                         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 present(alert, animated: true)
             }
-           }
         }
-
-
+    }
 }
