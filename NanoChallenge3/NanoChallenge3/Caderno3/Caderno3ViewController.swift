@@ -13,8 +13,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
-    
     @IBOutlet weak var Novoregistro: UIButton!
+    
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
     
     let dataPicker = UIDatePicker()
