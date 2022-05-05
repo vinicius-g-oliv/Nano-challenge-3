@@ -19,7 +19,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
     let dataPicker = UIDatePicker()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +55,14 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         return modelo.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+        
         return 1
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         return view
     }
-   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
     func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
@@ -71,12 +71,12 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-       
+        
         cell.textLabel?.text = modelo[indexPath.section].title
         cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -97,29 +97,29 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     //organizar
     func sortBasedOnSegmentPressed(){
-            switch filtro.selectedSegmentIndex{
-            case 0:
-                ordemNota()
-            case 1:
-                ordemData()
-            default: print("erro")
-            }
+        switch filtro.selectedSegmentIndex{
+        case 0:
+            ordemNota()
+        case 1:
+            ordemData()
+        default: print("erro")
         }
-        
+    }
+    
     
     func ordemNota(){
         modelo.sort { $0.title > $1.title }
-          table.reloadData()
-      }
-      func ordemData(){
-          modelo.sort { $0.btndata > $1.btndata }
-          table.reloadData()
-      }
-
+        table.reloadData()
+    }
+    func ordemData(){
+        modelo.sort { $0.btndata > $1.btndata }
+        table.reloadData()
+    }
+    
 }
-    
-    
-    
-    
-    
+
+
+
+
+
 

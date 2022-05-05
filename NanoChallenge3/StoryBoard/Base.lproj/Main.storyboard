@@ -682,7 +682,7 @@ Inglês</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-Jf-pGq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="662"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="20N-Vk-6qz">
                                         <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
@@ -703,18 +703,33 @@ Inglês</string>
                                     <action selector="didTapNewNote" destination="nr3-aa-xjr" eventType="touchUpInside" id="r0m-xv-LcN"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zot-vv-W89">
+                                <rect key="frame" x="54" y="98" width="307" height="32"/>
+                                <segments>
+                                    <segment title="Maior nota"/>
+                                    <segment title="Registro mais recente"/>
+                                </segments>
+                                <connections>
+                                    <action selector="Filter:" destination="nr3-aa-xjr" eventType="valueChanged" id="E62-pA-5Z0"/>
+                                    <action selector="Filter:" destination="w4w-NN-uyp" eventType="valueChanged" id="Hhs-g2-zCK"/>
+                                    <action selector="Filter:" destination="8Kv-EU-wCP" eventType="valueChanged" id="wys-U4-lcj"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0TP-Le-FMa"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Ws9-cV-3Ks" firstAttribute="centerX" secondItem="GlR-4h-Vq1" secondAttribute="centerX" id="1Cq-vq-m7J"/>
+                            <constraint firstItem="0TP-Le-FMa" firstAttribute="trailing" secondItem="zot-vv-W89" secondAttribute="trailing" constant="53" id="4gg-oN-FWj"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="trailing" secondItem="xIw-Jf-pGq" secondAttribute="trailing" id="BIV-0q-BA4"/>
                             <constraint firstItem="Ws9-cV-3Ks" firstAttribute="centerY" secondItem="GlR-4h-Vq1" secondAttribute="centerY" id="E3i-0Y-jIK"/>
                             <constraint firstItem="5Wu-Tw-8xc" firstAttribute="leading" secondItem="0TP-Le-FMa" secondAttribute="leading" constant="10" id="Fz4-17-1lg"/>
+                            <constraint firstItem="xIw-Jf-pGq" firstAttribute="top" secondItem="zot-vv-W89" secondAttribute="bottom" constant="10" id="IZW-x8-ArB"/>
                             <constraint firstItem="xIw-Jf-pGq" firstAttribute="leading" secondItem="0TP-Le-FMa" secondAttribute="leading" id="IxP-PB-G5f"/>
-                            <constraint firstItem="xIw-Jf-pGq" firstAttribute="top" secondItem="0TP-Le-FMa" secondAttribute="top" id="XCX-q1-Rbc"/>
+                            <constraint firstItem="zot-vv-W89" firstAttribute="top" secondItem="0TP-Le-FMa" secondAttribute="top" constant="10" id="eNK-S0-8RD"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="bottom" secondItem="5Wu-Tw-8xc" secondAttribute="bottom" constant="20" id="gqf-oT-oXX"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="trailing" secondItem="5Wu-Tw-8xc" secondAttribute="trailing" constant="10" id="hUj-28-LfC"/>
+                            <constraint firstItem="zot-vv-W89" firstAttribute="leading" secondItem="0TP-Le-FMa" secondAttribute="leading" constant="54" id="sld-na-sg3"/>
                             <constraint firstItem="5Wu-Tw-8xc" firstAttribute="top" secondItem="xIw-Jf-pGq" secondAttribute="bottom" constant="10" id="vgK-4j-FQB"/>
                         </constraints>
                     </view>
@@ -723,13 +738,14 @@ Inglês</string>
                     </navigationItem>
                     <connections>
                         <outlet property="Novoregistro" destination="5Wu-Tw-8xc" id="CNe-9d-pnB"/>
+                        <outlet property="filtro" destination="zot-vv-W89" id="eUb-qP-NkJ"/>
                         <outlet property="label" destination="Ws9-cV-3Ks" id="aHt-Qw-bbj"/>
                         <outlet property="table" destination="xIw-Jf-pGq" id="eJe-6Q-UfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEc-Ve-ghW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2051" y="-860"/>
+            <point key="canvasLocation" x="2050.7246376811595" y="-860.49107142857144"/>
         </scene>
         <!--Caderno3 View Controller-->
         <scene sceneID="NKo-Td-eYJ">

@@ -11,10 +11,19 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
+    @IBOutlet weak var filtro: UISegmentedControl!
     @IBOutlet weak var Novoregistro: UIButton!
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
-   
+    @IBAction func Filter(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sortBasedOnSegmentPressed()
+    }
+    
+    
     
     
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
@@ -54,14 +63,14 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         return modelo.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+        
         return 1
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         return view
     }
-   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
     func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
@@ -70,12 +79,12 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-       
+        
         cell.textLabel?.text = modelo[indexPath.section].title
         cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -93,6 +102,26 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         vc.data = model.btndata
         vc.anotacao = model.anotacao
         navigationController?.pushViewController(vc, animated: true)
+    }
+    //organizar
+    func sortBasedOnSegmentPressed(){
+        switch filtro.selectedSegmentIndex{
+        case 0:
+            ordemNota()
+        case 1:
+            ordemData()
+        default: print("erro")
+        }
+    }
+    
+    
+    func ordemNota(){
+        modelo.sort { $0.title > $1.title }
+        table.reloadData()
+    }
+    func ordemData(){
+        modelo.sort { $0.btndata > $1.btndata }
+        table.reloadData()
     }
     
     
