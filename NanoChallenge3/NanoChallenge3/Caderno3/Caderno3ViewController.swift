@@ -13,22 +13,36 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
-    
     @IBOutlet weak var Novoregistro: UIButton!
+    @IBOutlet weak var filtro: UISegmentedControl!
+    
+    @IBAction func Filter(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sortBasedOnSegmentPressed()
+    }
+    
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
+    
     let dataPicker = UIDatePicker()
+    
     override func viewDidLoad() {
+        let nib  = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "CustomCellTableViewCell")
         super.viewDidLoad()
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
         title = "Matemática e Ciências da Natureza"
+        table.reloadData()
         
         
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntradaCaderno2 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntryViewController3 else {
             return
         }
         vc.title = "Novo Resultado"
@@ -40,10 +54,18 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             self.table.isHidden = false
             self.table.reloadData()
         }
+        
+             
         navigationController?.pushViewController(vc, animated: true)
     }
     
     // Table
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+          modelo.remove(at: indexPath.section)
+          tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return modelo.count
@@ -59,18 +81,21 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
-    func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
-       
-        cell.textLabel?.text = modelo[indexPath.section].title
-        cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
-        return cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0
     }
 
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellTableViewCell", for: indexPath) as! CustomCellTableViewCell
+       
+        cell.nota.text = modelo[indexPath.section].title
+        cell.data.text = modelo[indexPath.section].btndata
+       
+        
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -88,12 +113,27 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         vc.data = model.btndata
         navigationController?.pushViewController(vc, animated: true)
     }
+    // organizar
+    func sortBasedOnSegmentPressed(){
+            switch filtro.selectedSegmentIndex{
+            case 0:
+                ordemNota()
+            case 1:
+                ordemData()
+            default: print("erro")
+            }
+        }
+        
     
-    
-    
-    
-    
-    
+    func ordemNota(){
+        modelo.sort { $0.title > $1.title }
+          table.reloadData()
+      }
+      func ordemData(){
+          modelo.sort { $0.btndata > $1.btndata }
+          table.reloadData()
+      }
+
 }
 
 

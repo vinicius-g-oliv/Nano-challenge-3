@@ -17,6 +17,8 @@
 		558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E7280DEE41009759A9 /* Caderno1ViewController.swift */; };
 		558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865E9280E0544009759A9 /* Caderno2ViewController.swift */; };
 		558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558865EB280F2E61009759A9 /* Caderno3ViewController.swift */; };
+		558E59DA2822FB9000BAB32E /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558E59D82822FB9000BAB32E /* CustomCellTableViewCell.swift */; };
+		558E59DB2822FB9000BAB32E /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558E59D92822FB9000BAB32E /* CustomCellTableViewCell.xib */; };
 		6176D4A62819ACDE001086FE /* EntradaCaderno2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176D4A52819ACDE001086FE /* EntradaCaderno2.swift */; };
 		619357C5281B06ED00D5F373 /* EntradaCaderno1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357C4281B06ED00D5F373 /* EntradaCaderno1.swift */; };
 		619357C7281B073C00D5F373 /* NoteViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619357C6281B073C00D5F373 /* NoteViewController1.swift */; };
@@ -37,6 +39,8 @@
 		558865E7280DEE41009759A9 /* Caderno1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno1ViewController.swift; sourceTree = "<group>"; };
 		558865E9280E0544009759A9 /* Caderno2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno2ViewController.swift; sourceTree = "<group>"; };
 		558865EB280F2E61009759A9 /* Caderno3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caderno3ViewController.swift; sourceTree = "<group>"; };
+		558E59D82822FB9000BAB32E /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		558E59D92822FB9000BAB32E /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		6176D4A52819ACDE001086FE /* EntradaCaderno2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntradaCaderno2.swift; sourceTree = "<group>"; };
 		619357C4281B06ED00D5F373 /* EntradaCaderno1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntradaCaderno1.swift; sourceTree = "<group>"; };
 		619357C6281B073C00D5F373 /* NoteViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController1.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				558865EB280F2E61009759A9 /* Caderno3ViewController.swift */,
 				619357CA281B0AA200D5F373 /* EntryViewController3.swift */,
 				619357CC281B0ABD00D5F373 /* NoteViewController3.swift */,
+				558E59D82822FB9000BAB32E /* CustomCellTableViewCell.swift */,
+				558E59D92822FB9000BAB32E /* CustomCellTableViewCell.xib */,
 			);
 			path = Caderno3;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			files = (
 				55452DBF27FF653B00A2B6AA /* LaunchScreen.storyboard in Resources */,
 				55452DBC27FF653B00A2B6AA /* Assets.xcassets in Resources */,
+				558E59DB2822FB9000BAB32E /* CustomCellTableViewCell.xib in Resources */,
 				55452DBA27FF653500A2B6AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +226,7 @@
 				55452DB327FF653500A2B6AA /* AppDelegate.swift in Sources */,
 				619357CB281B0AA200D5F373 /* EntryViewController3.swift in Sources */,
 				558865EC280F2E61009759A9 /* Caderno3ViewController.swift in Sources */,
+				558E59DA2822FB9000BAB32E /* CustomCellTableViewCell.swift in Sources */,
 				6176D4A62819ACDE001086FE /* EntradaCaderno2.swift in Sources */,
 				55452DB527FF653500A2B6AA /* SceneDelegate.swift in Sources */,
 				558865E8280DEE41009759A9 /* Caderno1ViewController.swift in Sources */,
