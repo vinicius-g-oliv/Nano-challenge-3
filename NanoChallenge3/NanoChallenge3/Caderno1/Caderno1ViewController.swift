@@ -95,8 +95,13 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
-    
+    private func tableView(_ tableView: UITableView,editingStyle: UITableViewCell.editingStyle, forRowAt indexPath:IndexPath){
+        <#code#>
+    }
     
     
     
