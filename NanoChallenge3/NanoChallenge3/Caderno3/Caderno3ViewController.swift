@@ -14,16 +14,23 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
     @IBOutlet weak var Novoregistro: UIButton!
+    @IBOutlet weak var filtro: UISegmentedControl!
+    
+    @IBAction func Filter(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sortBasedOnSegmentPressed()
+    }
     
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
     
     let dataPicker = UIDatePicker()
     
     override func viewDidLoad() {
-        
         let nib  = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellTableViewCell")
-        
         super.viewDidLoad()
         super.viewDidLoad()
         table.delegate = self
@@ -35,7 +42,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntradaCaderno2 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntryViewController3 else {
             return
         }
         vc.title = "Novo Resultado"
@@ -47,10 +54,18 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             self.table.isHidden = false
             self.table.reloadData()
         }
+        
+             
         navigationController?.pushViewController(vc, animated: true)
     }
     
     // Table
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+          modelo.remove(at: indexPath.section)
+          tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return modelo.count
@@ -98,12 +113,27 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         vc.data = model.btndata
         navigationController?.pushViewController(vc, animated: true)
     }
+    // organizar
+    func sortBasedOnSegmentPressed(){
+            switch filtro.selectedSegmentIndex{
+            case 0:
+                ordemNota()
+            case 1:
+                ordemData()
+            default: print("erro")
+            }
+        }
+        
     
-    
-    
-    
-    
-    
+    func ordemNota(){
+        modelo.sort { $0.title > $1.title }
+          table.reloadData()
+      }
+      func ordemData(){
+          modelo.sort { $0.btndata > $1.btndata }
+          table.reloadData()
+      }
+
 }
 
 

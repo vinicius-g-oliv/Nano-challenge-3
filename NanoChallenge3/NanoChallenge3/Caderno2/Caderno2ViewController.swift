@@ -8,6 +8,14 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var notas: UIButton!
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
+    @IBOutlet weak var filtro: UISegmentedControl!
+    @IBAction func Filter(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sortBasedOnSegmentPressed()
+    }
     
     var modelo: [(title: String, anotacao: String, btndata: String)] = []
     let dataPicker = UIDatePicker()
@@ -36,6 +44,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
             self.table.isHidden = false
             self.table.reloadData()
         }
+        ordemNota()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -86,6 +95,27 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    //organizar
+    func sortBasedOnSegmentPressed(){
+            switch filtro.selectedSegmentIndex{
+            case 0:
+                ordemNota()
+            case 1:
+                ordemData()
+            default: print("erro")
+            }
+        }
+        
+    
+    func ordemNota(){
+        modelo.sort { $0.title > $1.title }
+          table.reloadData()
+      }
+      func ordemData(){
+          modelo.sort { $0.btndata > $1.btndata }
+          table.reloadData()
+      }
+
 }
     
     

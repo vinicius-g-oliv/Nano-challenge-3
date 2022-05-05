@@ -65,33 +65,34 @@ class EntradaCaderno1: UIViewController {
     
     
     @objc func didTapSave() {
-    
+        
         if let Nota = campoNota.text {
-            if ((!Nota.isEmpty && campoAnotacoes.text.isEmpty) || (!Nota.isEmpty && !campoAnotacoes.text.isEmpty) || (!Nota.isEmpty && !escolherData.text!.isEmpty)) {
+            if ((!Nota.isEmpty && campoAnotacoes.text.isEmpty) || (!Nota.isEmpty && !campoAnotacoes.text.isEmpty)) {
                 let Converter:Int? = Int(campoNota.text!)
                 if (Converter! <= 90 && Converter! >= 0) {
-                    guard let data = escolherData.text else {
+                    guard let data = escolherData.text, !data.isEmpty else {
                         let data = ""
+                        let alert = UIAlertController(title: "Atenção", message: "Campo data vazio", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        present(alert, animated: true)
                         completion?(Nota, campoAnotacoes.text, data)
                         return
                     }
                     completion?(Nota, campoAnotacoes.text, data)
                 }else{
                     let alert = UIAlertController(title: "Atenção", message: "Preencha o campo com valor menor que ou igual a 90", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     present(alert, animated: true)
                 }
             }
             else
             {
                 
-                let alert = UIAlertController(title: "Atenção", message: "Preencha o campo acertos", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                let alert = UIAlertController(title: "Atenção", message: "Preencha o campo acertos e data", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 present(alert, animated: true)
             }
-         
-           }
+            
         }
-
-
+    }
 }
