@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EntryViewController3: UIViewController {
+class EntradaCaderno3: UIViewController {
     
     
     @IBOutlet weak var escolhaData: UITextField!

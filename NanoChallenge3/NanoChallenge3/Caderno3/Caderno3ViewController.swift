@@ -29,8 +29,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     let dataPicker = UIDatePicker()
     
     override func viewDidLoad() {
-        let nib  = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
-        table.register(nib, forCellReuseIdentifier: "CustomCellTableViewCell")
+        let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
         super.viewDidLoad()
         super.viewDidLoad()
         table.delegate = self
@@ -42,7 +42,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didTapNewNote() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntryViewController3 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
             return
         }
         vc.title = "Novo Resultado"
@@ -55,86 +55,75 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             self.table.reloadData()
         }
         
-             
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
     // Table
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-          modelo.remove(at: indexPath.section)
-          tableView.deleteRows(at: [indexPath], with: .automatic)
-      }
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelo.count
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
-        return 1
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        return view
-    }
-   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
-    }
-
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellTableViewCell", for: indexPath) as! CustomCellTableViewCell
-       
-        cell.nota.text = modelo[indexPath.section].title
-        cell.data.text = modelo[indexPath.section].btndata
-       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno3", for: indexPath) as! CustomCellCaderno3
         
+        cell.nota.text = modelo[indexPath.row].title
+        cell.data.text = modelo[indexPath.row].btndata
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = modelo[indexPath.section]
+        let model = modelo[indexPath.row]
         
         // Show note controller
-        guard let vc = storyboard?.instantiateViewController(identifier: "note3") as? NoteViewController3 else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "note3")     as? NotaCaderno3 else {
             return
         }
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.title = "Resultados"
+        
         vc.nota = model.title
         vc.anotacao = model.anotacao
         vc.data = model.btndata
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    // organizar
-    func sortBasedOnSegmentPressed(){
-            switch filtro.selectedSegmentIndex{
-            case 0:
-                ordemNota()
-            case 1:
-                ordemData()
-            default: print("erro")
-            }
-        }
+        navigationController?.pushViewController(vc,animated: true)
         
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        modelo.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }    // organizar
+    func sortBasedOnSegmentPressed(){
+        switch filtro.selectedSegmentIndex{
+        case 0:
+            ordemNota()
+        case 1:
+            ordemData()
+        default: print("erro")
+        }
+    }
+    
     
     func ordemNota(){
         modelo.sort { $0.title > $1.title }
-          table.reloadData()
-      }
-      func ordemData(){
-          modelo.sort { $0.btndata > $1.btndata }
-          table.reloadData()
-      }
+        table.reloadData()
+    }
+    func ordemData() {
+        modelo.sort {$0.btndata > $1.btndata }
+        
+        table.reloadData()
+    }
+   
 
 }
+
+
+
 
 
 

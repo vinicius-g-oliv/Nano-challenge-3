@@ -215,17 +215,7 @@ Inglês</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
-                                <rect key="frame" x="0.0" y="149" width="414" height="652"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="71" id="z59-rc-3c3">
-                                        <rect key="frame" x="20" y="49.5" width="374" height="71"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z59-rc-3c3" id="Bl9-Pg-pqz">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="71"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <rect key="frame" x="0.0" y="164" width="414" height="637"/>
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4o-D1-yox">
@@ -254,7 +244,7 @@ Inglês</string>
                             <constraint firstItem="rFn-Kc-lLW" firstAttribute="leading" secondItem="Ilg-4h-EVU" secondAttribute="leading" constant="54" id="85P-Yj-kWQ"/>
                             <constraint firstItem="rFn-Kc-lLW" firstAttribute="top" secondItem="Ilg-4h-EVU" secondAttribute="top" constant="20" id="95A-ie-Nci"/>
                             <constraint firstItem="Ilg-4h-EVU" firstAttribute="bottom" secondItem="O4o-D1-yox" secondAttribute="bottom" constant="20" id="AYQ-la-ttB"/>
-                            <constraint firstItem="KcG-4Q-V0k" firstAttribute="top" secondItem="rFn-Kc-lLW" secondAttribute="bottom" constant="10" id="FUh-pj-jMT"/>
+                            <constraint firstItem="KcG-4Q-V0k" firstAttribute="top" secondItem="rFn-Kc-lLW" secondAttribute="bottom" constant="25" id="FUh-pj-jMT"/>
                             <constraint firstItem="KcG-4Q-V0k" firstAttribute="leading" secondItem="Vuh-gv-Ycz" secondAttribute="leadingMargin" constant="-20" id="KEF-AN-hPv"/>
                             <constraint firstItem="Ilg-4h-EVU" firstAttribute="trailing" secondItem="rFn-Kc-lLW" secondAttribute="trailing" constant="53" id="QkL-0Y-60X"/>
                             <constraint firstItem="PN4-fH-00M" firstAttribute="centerX" secondItem="Vuh-gv-Ycz" secondAttribute="centerX" id="Rvi-Vk-dIc"/>
@@ -551,10 +541,10 @@ Inglês</string>
             </objects>
             <point key="canvasLocation" x="4650.7246376811599" y="-860.49107142857144"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Nota Caderno2-->
         <scene sceneID="J0Y-kz-dHL">
             <objects>
-                <viewController storyboardIdentifier="note" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AMk-Zn-abz" customClass="NoteViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="note" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AMk-Zn-abz" customClass="NotaCaderno2" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JW3-BB-F3c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -815,10 +805,10 @@ Inglês</string>
             </objects>
             <point key="canvasLocation" x="2082.608695652174" y="876.5625"/>
         </scene>
-        <!--Entry View Controller3-->
+        <!--Entrada Caderno3-->
         <scene sceneID="nOk-fl-B4t">
             <objects>
-                <viewController storyboardIdentifier="new3" id="5sx-Ja-LU8" customClass="EntryViewController3" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new3" id="5sx-Ja-LU8" customClass="EntradaCaderno3" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UTk-gX-1CS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -893,10 +883,10 @@ Inglês</string>
             </objects>
             <point key="canvasLocation" x="3618.840579710145" y="875.89285714285711"/>
         </scene>
-        <!--Note View Controller3-->
+        <!--Nota Caderno3-->
         <scene sceneID="XwS-G0-lDk">
             <objects>
-                <viewController storyboardIdentifier="note3" id="24u-Na-Q0W" customClass="NoteViewController3" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="note3" id="24u-Na-Q0W" customClass="NotaCaderno3" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oj0-jI-XtX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

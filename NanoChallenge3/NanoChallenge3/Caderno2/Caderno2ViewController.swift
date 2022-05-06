@@ -22,6 +22,8 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     override func viewDidLoad() {
+        let nib  = UINib(nibName: "CustomCellCaderno2", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "CustomCellCaderno2")
         super.viewDidLoad()
         super.viewDidLoad()
         table.delegate = self
@@ -51,26 +53,15 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     // Table
     
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelo.count
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        return view
-    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 50
     }
-    func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno2", for: indexPath) as! CustomCellCaderno2
         
         cell.textLabel?.text = modelo[indexPath.section].title
         cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
@@ -84,7 +75,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         let model = modelo[indexPath.section]
         
         // Show note controller
-        guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NoteViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NotaCaderno2 else {
             return
         }
         vc.navigationItem.largeTitleDisplayMode = .never
@@ -94,6 +85,11 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         vc.data = model.btndata
         navigationController?.pushViewController(vc, animated: true)
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        modelo.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
     
     //organizar
     func sortBasedOnSegmentPressed(){

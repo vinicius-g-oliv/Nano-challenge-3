@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomCellTableViewCell: UITableViewCell {
+class CustomCellCaderno3: UITableViewCell {
 
     @IBOutlet weak var nota: UILabel!
     @IBOutlet weak var fundo: UIView!

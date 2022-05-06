@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoteViewController3: UIViewController {
+class NotaCaderno3: UIViewController {
     
     @IBOutlet var campoNota: UILabel!
     @IBOutlet var campoAnotacao: UITextView!
