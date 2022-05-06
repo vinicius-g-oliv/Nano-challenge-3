@@ -52,19 +52,22 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Table
     
-    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Registros"
+        return title
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelo.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 20
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno2", for: indexPath) as! CustomCellCaderno2
         
-        cell.textLabel?.text = modelo[indexPath.section].title
-        cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
+        cell.nota.text = modelo[indexPath.row].title
+        cell.data.text = modelo[indexPath.row].btndata
         return cell
     }
     
@@ -72,9 +75,11 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = modelo[indexPath.section]
+        let model = modelo[indexPath.row]
         
         // Show note controller
+        
+        
         guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NotaCaderno2 else {
             return
         }

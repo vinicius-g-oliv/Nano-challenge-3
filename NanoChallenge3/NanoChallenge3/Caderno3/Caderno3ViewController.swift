@@ -39,6 +39,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
         
         
+        
     }
     
     @IBAction func didTapNewNote() {
@@ -60,9 +61,16 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // Table
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Registros"
+        return title
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelo.count
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,30 +101,31 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
+  
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         modelo.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-    }    // organizar
+    }
+    
+    // organizar
     func sortBasedOnSegmentPressed(){
         switch filtro.selectedSegmentIndex{
         case 0:
-            ordemNota()
+            ordemMaiorNota()
         case 1:
-            ordemData()
+            ordemMenorNota()
         default: print("erro")
         }
     }
     
     
-    func ordemNota(){
+    func ordemMaiorNota(){
         modelo.sort { $0.title > $1.title }
         table.reloadData()
     }
-    func ordemData() {
-        modelo.sort {$0.btndata > $1.btndata }
-        
-        table.reloadData()
+    func ordemMenorNota() {
+     modelo.sort { $0.title < $1.title }
+     table.reloadData()
     }
    
 

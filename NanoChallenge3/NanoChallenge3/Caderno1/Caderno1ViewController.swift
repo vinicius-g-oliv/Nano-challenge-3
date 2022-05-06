@@ -58,6 +58,10 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Table
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Registros"
+        return title
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return modelo.count
@@ -71,7 +75,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         return view
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 20
     }
     func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
         return 1
