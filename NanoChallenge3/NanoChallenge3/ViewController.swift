@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
+    @IBOutlet var table: UITableView!
+    
     @IBOutlet weak var btnCaderno1: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -16,9 +18,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var btnCaderno2: UIButton!
 //    private weak var backgroundimg: UIImageView?
     
-    @IBAction func teste(_ sender: Caderno3ViewController) {
-    
-    }
     var imgCar = [UIImage(named: "Dica1")!,UIImage(named: "Dica2")!,UIImage(named: "Dica3")!,UIImage(named: "Dica4")!,UIImage(named: "Dica5")!,UIImage(named: "Dica6")!,UIImage(named: "Dica7")!]
     var timer : Timer?
     var currentCellIndex = 0
