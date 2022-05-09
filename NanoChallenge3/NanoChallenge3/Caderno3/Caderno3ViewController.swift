@@ -21,11 +21,11 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
      super.viewWillAppear(animated)
-        iniciar()
+        ler_livros()
+        table.reloadData()
         sortBasedOnSegmentPressed()
     }
-    var modelo : [Registro] = []
-    
+    var modelo: [Registro] = []
     
     //var modelo: [(title: String, anotacao: String, btndata: String)] = []
     let dataPicker = UIDatePicker()
@@ -33,11 +33,9 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
         super.viewDidLoad()
-        UserDefaults.standard.synchronize()
         table.delegate = self
         table.dataSource = self
         title = "Matemática e Ciências da Natureza"
-        
         table.reloadData()
 
     }
@@ -46,6 +44,10 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             let array = try! PropertyListDecoder().decode([Registro].self, from: data)
             modelo = array
             print("TO lendoooo")
+        }
+        
+        if modelo.count > 0 {
+            self.label.isHidden = false
         }
     }
     
@@ -62,8 +64,6 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         ler_livros()
         print("Depois de ler")
     }
-
-
     
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
@@ -78,6 +78,10 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             self.label.isHidden = true
             self.table.isHidden = false
             self.table.reloadData()
+            if let data = try? PropertyListEncoder().encode(self.modelo) {
+                UserDefaults.standard.set(data, forKey: "itens")
+            }
+            UserDefaults.standard.synchronize()
         }
         
         
@@ -128,7 +132,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
   
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         modelo.remove(at: indexPath.row)
-        gravar_livros()
+       gravar_livros()
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
