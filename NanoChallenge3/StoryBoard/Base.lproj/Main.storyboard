@@ -39,7 +39,7 @@
                                                     <segue destination="w4w-NN-uyp" kind="show" identifier="Linguagens e Códigos e Ciências Humanas Espanhol" id="WuL-fT-7FT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c" userLabel="btnCaderno2">
                                                 <rect key="frame" x="358" y="4" width="350" height="270"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="270" id="44Z-Io-QQS"/>
@@ -68,8 +68,7 @@ Inglês</string>
                                                     <color key="baseBackgroundColor" red="1" green="0.94901960784313721" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="teste2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdl-g7-0KP"/>
-                                                    <segue destination="8Kv-EU-wCP" kind="show" id="aZy-qi-Vup"/>
+                                                    <segue destination="8Kv-EU-wCP" kind="show" id="i3V-Ci-GDk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -106,21 +105,21 @@ Inglês</string>
                                 <rect key="frame" x="10" y="621" width="394" height="190"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DKr-Ys-ppj">
-                                    <size key="itemSize" width="344" height="139"/>
+                                    <size key="itemSize" width="392" height="149"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="caroCell" id="h5M-LW-KFp" customClass="CarouselCollectionViewCell" customModule="NanoChallenge3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25.5" width="344" height="139"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="392" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s1t-Er-QWt">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="139"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="392" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-Ot-dt7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="139"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="392" height="149"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -130,7 +129,7 @@ Inglês</string>
                                                 <constraint firstAttribute="trailing" secondItem="dDe-Ot-dt7" secondAttribute="trailing" id="eAC-Uc-hZm"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="344" height="139"/>
+                                        <size key="customSize" width="392" height="149"/>
                                         <connections>
                                             <outlet property="imgCarousel" destination="dDe-Ot-dt7" id="uSx-Jf-UVP"/>
                                         </connections>
@@ -151,7 +150,7 @@ Inglês</string>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ETJ-DG-eZP" secondAttribute="trailing" constant="200" id="7JY-Zx-egq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="afL-Nw-bAt" secondAttribute="trailing" constant="22" id="Pgs-74-y6D"/>
@@ -175,6 +174,7 @@ Inglês</string>
                     <connections>
                         <outlet property="btnCaderno1" destination="cWE-dF-e2M" id="rnm-XC-VOF"/>
                         <outlet property="btnCaderno2" destination="hb0-0x-W5c" id="Ngh-R7-T56"/>
+                        <outlet property="btnCaderno3" destination="j5Y-8W-Per" id="oO0-nS-ar3"/>
                         <outlet property="collectionView" destination="879-gt-0o2" id="inr-ov-dSi"/>
                         <outlet property="pageControl" destination="lfj-tY-WUc" id="vut-TN-ggO"/>
                     </connections>
@@ -208,13 +208,7 @@ Inglês</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN4-fH-00M">
-                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
                                 <rect key="frame" x="0.0" y="164" width="414" height="637"/>
                                 <sections/>
                             </tableView>
@@ -223,7 +217,7 @@ Inglês</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="Novo registro" imagePadding="20"/>
                                 <connections>
-                                    <action selector="didTapNewNote" destination="nr3-aa-xjr" eventType="touchUpInside" id="C70-Y7-v9l"/>
+                                    <action selector="didTapNewNote" destination="nr3-aa-xjr" eventType="touchUpInside" id="xia-c8-sDr"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rFn-Kc-lLW">
@@ -234,7 +228,6 @@ Inglês</string>
                                 </segments>
                                 <connections>
                                     <action selector="Filter:" destination="nr3-aa-xjr" eventType="valueChanged" id="7nI-h5-Zld"/>
-                                    <action selector="Filter:" destination="8Kv-EU-wCP" eventType="valueChanged" id="tiy-2i-oi9"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -247,8 +240,6 @@ Inglês</string>
                             <constraint firstItem="KcG-4Q-V0k" firstAttribute="top" secondItem="rFn-Kc-lLW" secondAttribute="bottom" constant="25" id="FUh-pj-jMT"/>
                             <constraint firstItem="KcG-4Q-V0k" firstAttribute="leading" secondItem="Vuh-gv-Ycz" secondAttribute="leadingMargin" constant="-20" id="KEF-AN-hPv"/>
                             <constraint firstItem="Ilg-4h-EVU" firstAttribute="trailing" secondItem="rFn-Kc-lLW" secondAttribute="trailing" constant="53" id="QkL-0Y-60X"/>
-                            <constraint firstItem="PN4-fH-00M" firstAttribute="centerX" secondItem="Vuh-gv-Ycz" secondAttribute="centerX" id="Rvi-Vk-dIc"/>
-                            <constraint firstItem="PN4-fH-00M" firstAttribute="centerY" secondItem="Vuh-gv-Ycz" secondAttribute="centerY" id="XXx-de-8TD"/>
                             <constraint firstItem="O4o-D1-yox" firstAttribute="leading" secondItem="Ilg-4h-EVU" secondAttribute="leading" constant="10" id="Zfp-OR-jQj"/>
                             <constraint firstItem="Ilg-4h-EVU" firstAttribute="trailing" secondItem="KcG-4Q-V0k" secondAttribute="trailing" id="rCR-Qp-8aO"/>
                             <constraint firstItem="Ilg-4h-EVU" firstAttribute="trailing" secondItem="O4o-D1-yox" secondAttribute="trailing" constant="10" id="sL3-NR-89Z"/>
@@ -260,8 +251,6 @@ Inglês</string>
                     </navigationItem>
                     <connections>
                         <outlet property="filtro" destination="rFn-Kc-lLW" id="sAk-M6-Cvw"/>
-                        <outlet property="label" destination="PN4-fH-00M" id="JZN-Bp-tz1"/>
-                        <outlet property="notas" destination="O4o-D1-yox" id="Ixt-pE-trb"/>
                         <outlet property="table" destination="KcG-4Q-V0k" id="kwr-rd-2cH"/>
                     </connections>
                 </viewController>
@@ -383,12 +372,13 @@ Inglês</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-N7-Qqu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-N7-Qqu">
                                 <rect key="frame" x="10" y="281" width="394" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jd6-Mx-05Z"/>
@@ -502,6 +492,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="coA-zX-qyT"/>
@@ -612,7 +603,7 @@ Inglês</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-eP-5ob">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-eP-5ob">
                                 <rect key="frame" x="10" y="304" width="394" height="176"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -690,7 +681,6 @@ Inglês</string>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="Novo registro" imagePadding="20"/>
                                 <connections>
                                     <action selector="didTapNewNote" destination="w4w-NN-uyp" eventType="primaryActionTriggered" id="hBz-oJ-Xjr"/>
-                                    <action selector="didTapNewNote" destination="nr3-aa-xjr" eventType="touchUpInside" id="r0m-xv-LcN"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zot-vv-W89">
@@ -702,7 +692,6 @@ Inglês</string>
                                 <connections>
                                     <action selector="Filter:" destination="nr3-aa-xjr" eventType="valueChanged" id="E62-pA-5Z0"/>
                                     <action selector="Filter:" destination="w4w-NN-uyp" eventType="valueChanged" id="Hhs-g2-zCK"/>
-                                    <action selector="Filter:" destination="8Kv-EU-wCP" eventType="valueChanged" id="wys-U4-lcj"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -837,6 +826,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ioh-kI-eWG"/>
@@ -946,12 +936,13 @@ Inglês</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n9g-7q-bmS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n9g-7q-bmS">
                                 <rect key="frame" x="10" y="311" width="394" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rdY-SG-LGJ"/>

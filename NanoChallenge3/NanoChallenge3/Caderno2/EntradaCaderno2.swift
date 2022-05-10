@@ -89,6 +89,6 @@ class EntradaCaderno2: UIViewController {
             present(alert, animated: true)
                 return
             }
-            completion?(nota, campoAnotacao.text, data)
+            completion?(nota, data,campoAnotacao.text)
         }
 }

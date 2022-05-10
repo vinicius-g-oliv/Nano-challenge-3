@@ -10,21 +10,18 @@ import UIKit
 class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
     @IBOutlet var table: UITableView!
     @IBOutlet weak var filtro: UISegmentedControl!
     @IBAction func Filter(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
     
-    
-    var modelo: [Registro] = []
+    var modelo: [RegistroCaderno3] = []
     let dataPicker = UIDatePicker()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         iniciar()
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
@@ -38,10 +35,9 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         sortBasedOnSegmentPressed()
     }
     
-    
     func ler_livros(){
         if let data = UserDefaults.standard.data(forKey: "itens") {
-            let array = try! PropertyListDecoder().decode([Registro].self, from: data)
+            let array = try! PropertyListDecoder().decode([RegistroCaderno3].self, from: data)
                 modelo = array
             
         }
@@ -62,30 +58,25 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
             return
-            
         }
         vc.title = "Novo Resultado"
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completion = { nota ,data , anotacao in
             self.navigationController?.popViewController(animated: true)
-            self.modelo.append(Registro(nota: nota, data: data, salvarAnotacao: anotacao))
+            self.modelo.append(RegistroCaderno3(nota: nota, data: data, salvarAnotacao: anotacao))
             if let data = try? PropertyListEncoder().encode(self.modelo) {
                 UserDefaults.standard.set(data, forKey: "itens")
             }
             UserDefaults.standard.synchronize()
-    
         }
-        
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    
     // Table
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let title = "Registros"
         return title
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelo.count
     }
@@ -111,7 +102,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             return
         }
         vc.navigationItem.largeTitleDisplayMode = .never
-        
+        vc.title = "Resultados"
         vc.nota = modelo.nota
         vc.data = modelo.data
         vc.anotacao = modelo.salvarAnotacao

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Registro : Codable {
+struct RegistroCaderno3 : Codable {
     var nota: String
     var data: String
     var salvarAnotacao: String

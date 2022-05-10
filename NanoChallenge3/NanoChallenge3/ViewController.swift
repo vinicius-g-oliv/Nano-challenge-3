@@ -10,14 +10,11 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
     @IBOutlet weak var btnCaderno1: UIButton!
+    @IBOutlet weak var btnCaderno2: UIButton!
+    @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var btnCaderno2: UIButton!
-    
-    @IBAction func teste2(_ sender: Any) {
-    
-    }
-    
+
     var imgCar = [UIImage(named: "Dica1")!,UIImage(named: "Dica2")!,UIImage(named: "Dica3")!,UIImage(named: "Dica4")!,UIImage(named: "Dica5")!,UIImage(named: "Dica6")!,UIImage(named: "Dica7")!]
     var timer : Timer?
     var currentCellIndex = 0
@@ -29,14 +26,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
       
         startTimer()
-        let titulo = "SIMUH"
-        title = titulo.uppercased()
+        title = "E-volução"
         
         btnCaderno1.layer.cornerRadius = 12
         //72C2FC
         btnCaderno2.layer.cornerRadius = 12
         //FFF27E
-//        btnCaderno3.layer.cornerRadius = 12
+        //btnCaderno3.layer.cornerRadius = 12
         //FF7577
         
   
