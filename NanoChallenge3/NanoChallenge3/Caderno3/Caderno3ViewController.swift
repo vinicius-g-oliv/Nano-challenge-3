@@ -13,59 +13,59 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
-    @IBOutlet weak var Novoregistro: UIButton!
     @IBOutlet weak var filtro: UISegmentedControl!
     @IBAction func Filter(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-     super.viewWillAppear(animated)
-        ler_livros()
-        table.reloadData()
-        sortBasedOnSegmentPressed()
-    }
-    var modelo: [Registro] = []
     
-    //var modelo: [(title: String, anotacao: String, btndata: String)] = []
+    var modelo: [Registro] = []
     let dataPicker = UIDatePicker()
+    
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        iniciar()
+        
+        // pegar o array modelo e adicionar os valores salvos
+        
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
-        super.viewDidLoad()
+
         table.delegate = self
         table.dataSource = self
         title = "Matemática e Ciências da Natureza"
-        table.reloadData()
-
+        self.table.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //self.table.isHidden = false
+        super.viewWillAppear(animated)
+        sortBasedOnSegmentPressed()
+        self.table.reloadData()
+    }
+    
+    
     func ler_livros(){
         if let data = UserDefaults.standard.data(forKey: "itens") {
             let array = try! PropertyListDecoder().decode([Registro].self, from: data)
-            modelo = array
-            print("TO lendoooo")
-        }
-        
-        if modelo.count > 0 {
-            self.label.isHidden = false
+                modelo = array
+            
         }
     }
     
     func gravar_livros(){
-        //UserDefaults.standard.set(self.models, forKey: "itens")
         if let data = try? PropertyListEncoder().encode(self.modelo) {
             UserDefaults.standard.set(data, forKey: "itens")
-            print("TO gravando")
+            
         }
     }
     
     func iniciar(){
-        print("INicia")
         ler_livros()
-        print("Depois de ler")
+        
     }
-    
-    @IBAction func didTapNewNote() {
+    func teste22() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
             return
             
@@ -77,11 +77,37 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
             self.modelo.append(Registro(nota: nota, data: data))
             self.label.isHidden = true
             self.table.isHidden = false
-            self.table.reloadData()
             if let data = try? PropertyListEncoder().encode(self.modelo) {
                 UserDefaults.standard.set(data, forKey: "itens")
             }
             UserDefaults.standard.synchronize()
+      
+
+    
+        }
+        
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func didTapNewNote() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
+            return
+            
+        }
+        vc.title = "Novo Resultado"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { nota, anotacao, data in
+            self.navigationController?.popViewController(animated: true)
+            self.modelo.append(Registro(nota: nota, data: data))
+//            self.label.isHidden = true
+            self.table.isHidden = false
+            if let data = try? PropertyListEncoder().encode(self.modelo) {
+                UserDefaults.standard.set(data, forKey: "itens")
+            }
+            UserDefaults.standard.synchronize()
+            print("teste4444")
+
+    
         }
         
         
@@ -102,8 +128,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno3", for: indexPath) as! CustomCellCaderno3
-        
+         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno3", for: indexPath) as! CustomCellCaderno3
+  
         cell.nota.text = modelo[indexPath.row].nota
         cell.data.text = modelo[indexPath.row].data
         return cell
@@ -111,7 +137,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = modelo[indexPath.row]
+        let modelo = modelo[indexPath.row]
         
         // Show note controller
         guard let vc = storyboard?.instantiateViewController(identifier: "note3")     as? NotaCaderno3 else {
@@ -119,9 +145,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         
-        vc.nota = model.nota
-      //  vc.anotacao = model.anotacao
-        vc.data = model.data
+        vc.nota = modelo.nota
+        vc.data = modelo.data
         navigationController?.pushViewController(vc,animated: true)
         
         
@@ -129,10 +154,10 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-  
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         modelo.remove(at: indexPath.row)
-       gravar_livros()
+        gravar_livros()
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
@@ -153,11 +178,11 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     func ordemMenorNota() {
-     modelo.sort { $0.nota < $1.nota }
-     table.reloadData()
+        modelo.sort { $0.nota < $1.nota }
+        table.reloadData()
     }
-   
-
+    
+    
 }
 
 

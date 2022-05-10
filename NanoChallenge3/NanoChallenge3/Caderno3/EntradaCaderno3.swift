@@ -20,7 +20,7 @@ class EntradaCaderno3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        converter()
+        donePressed()
         campoAnotacao.layer.cornerRadius = 10
         campoNota.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .plain, target: self, action: #selector(didTapSave))
@@ -63,12 +63,6 @@ class EntradaCaderno3: UIViewController {
         
     }
     
-    func converter () {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        escolhaData.text = formatter.string(from: self.datePicker.date)
-        self.view.endEditing(true)
-    }
     
     @objc func didTapSave() {
         

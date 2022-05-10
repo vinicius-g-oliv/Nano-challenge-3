@@ -12,33 +12,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var btnCaderno1: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var btnCaderno3: UIButton!
     @IBOutlet weak var btnCaderno2: UIButton!
-//    private weak var backgroundimg: UIImageView?
     
-    @IBAction func teste(_ sender: Caderno3ViewController) {
+    
+    @IBAction func teste2(_ sender: Any) {
+       let teste = Caderno3ViewController()
+        teste.iniciar()
     
     }
+    
     var imgCar = [UIImage(named: "Dica1")!,UIImage(named: "Dica2")!,UIImage(named: "Dica3")!,UIImage(named: "Dica4")!,UIImage(named: "Dica5")!,UIImage(named: "Dica6")!,UIImage(named: "Dica7")!]
     var timer : Timer?
     var currentCellIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        //inicializa a background
-//
-//        let background = UIImageView()
-//        self.view.addSubview(background)
-//        view.sendSubviewToBack(background)
-//        background.image = UIImage(named: "back")
-//        background.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            background.topAnchor.constraint(equalTo: view.topAnchor),
-//            background.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-//            background.leftAnchor.constraint(equalTo: view.leftAnchor),
-//            background.rightAnchor.constraint(equalTo: view.rightAnchor)
-//        ])
-//        self.backgroundimg = background
-        collectionView.delegate = self
+
         collectionView.dataSource = self
         pageControl.numberOfPages = imgCar.count
         
@@ -51,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //72C2FC
         btnCaderno2.layer.cornerRadius = 12
         //FFF27E
-        btnCaderno3.layer.cornerRadius = 12
+//        btnCaderno3.layer.cornerRadius = 12
         //FF7577
         
   
