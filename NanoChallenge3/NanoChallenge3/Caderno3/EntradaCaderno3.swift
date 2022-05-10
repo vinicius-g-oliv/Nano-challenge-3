@@ -57,11 +57,13 @@ class EntradaCaderno3: UIViewController {
         //formatter
         let formatter = DateFormatter()
         formatter.dateStyle = .long
+        
         escolhaData.text = formatter.string(from: self.datePicker.date)
         self.view.endEditing(true)
         
-        
     }
+    
+    
     @objc func didTapSave() {
         
         // *campoNota -> TextField de Acertos
@@ -83,14 +85,14 @@ class EntradaCaderno3: UIViewController {
         }
         let Converter:Int? = Int(campoNota.text!)
         if (Converter! <= 90 && Converter! >= 0) {
-            
+           
         } else {
             let alert = UIAlertController(title: "Atenção", message: "Digite um valor menor que 90 e maior que 0", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true)
-            return
+                return
+            }
+            completion?(nota, campoAnotacao.text, data)
         }
-        completion?(nota, data, campoAnotacao.text)
     }
-}
 

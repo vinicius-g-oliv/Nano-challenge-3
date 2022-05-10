@@ -8,14 +8,14 @@
 import Foundation
 
 struct Registro : Codable {
-    var salvarAcertos: String
-    var salvarData: String
-    var salvarNota: String
+    var nota: String
+    var data: String
+  //  var anotacao: String
     
-    public init(salvarAcertos: String, salvarData: String, salvarNota: String){
-        self.salvarAcertos = salvarAcertos
-        self.salvarData = salvarData
-        self.salvarNota = salvarNota
+    public init(nota: String, data: String){
+        self.nota = nota
+        self.data = data
+        //self.anotacao = anotacao
     
     }
 }

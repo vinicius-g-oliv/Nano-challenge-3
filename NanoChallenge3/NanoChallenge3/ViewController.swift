@@ -16,7 +16,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     @IBAction func teste2(_ sender: Any) {
-
+       let teste = Caderno3ViewController()
+        teste.iniciar()
     
     }
     
