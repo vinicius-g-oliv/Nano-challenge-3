@@ -14,10 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var btnCaderno2: UIButton!
     
-    
     @IBAction func teste2(_ sender: Any) {
-       let teste = Caderno3ViewController()
-        teste.iniciar()
     
     }
     

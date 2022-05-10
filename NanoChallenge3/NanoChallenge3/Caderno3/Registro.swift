@@ -10,12 +10,12 @@ import Foundation
 struct Registro : Codable {
     var nota: String
     var data: String
-  //  var anotacao: String
+    var salvarAnotacao: String
     
-    public init(nota: String, data: String){
+    public init(nota: String, data: String, salvarAnotacao: String){
         self.nota = nota
         self.data = data
-        //self.anotacao = anotacao
+        self.salvarAnotacao = salvarAnotacao
     
     }
 }

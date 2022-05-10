@@ -12,7 +12,6 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBOutlet var table: UITableView!
-    @IBOutlet var label: UILabel!
     @IBOutlet weak var filtro: UISegmentedControl!
     @IBAction func Filter(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
@@ -25,24 +24,18 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         iniciar()
-        
-        // pegar o array modelo e adicionar os valores salvos
-        
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
-
         table.delegate = self
         table.dataSource = self
         title = "Matemática e Ciências da Natureza"
-        self.table.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //self.table.isHidden = false
         super.viewWillAppear(animated)
         sortBasedOnSegmentPressed()
-        self.table.reloadData()
     }
     
     
@@ -65,30 +58,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         ler_livros()
         
     }
-    func teste22() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
-            return
-            
-        }
-        vc.title = "Novo Resultado"
-        vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { nota, anotacao, data in
-            self.navigationController?.popViewController(animated: true)
-            self.modelo.append(Registro(nota: nota, data: data))
-            self.label.isHidden = true
-            self.table.isHidden = false
-            if let data = try? PropertyListEncoder().encode(self.modelo) {
-                UserDefaults.standard.set(data, forKey: "itens")
-            }
-            UserDefaults.standard.synchronize()
-      
 
-    
-        }
-        
-        
-        navigationController?.pushViewController(vc, animated: true)
-    }
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
             return
@@ -96,17 +66,13 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.title = "Novo Resultado"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { nota, anotacao, data in
+        vc.completion = { nota ,data , anotacao in
             self.navigationController?.popViewController(animated: true)
-            self.modelo.append(Registro(nota: nota, data: data))
-//            self.label.isHidden = true
-            self.table.isHidden = false
+            self.modelo.append(Registro(nota: nota, data: data, salvarAnotacao: anotacao))
             if let data = try? PropertyListEncoder().encode(self.modelo) {
                 UserDefaults.standard.set(data, forKey: "itens")
             }
             UserDefaults.standard.synchronize()
-            print("teste4444")
-
     
         }
         
@@ -132,6 +98,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
   
         cell.nota.text = modelo[indexPath.row].nota
         cell.data.text = modelo[indexPath.row].data
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -147,6 +114,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         
         vc.nota = modelo.nota
         vc.data = modelo.data
+        vc.anotacao = modelo.salvarAnotacao
+        
         navigationController?.pushViewController(vc,animated: true)
         
         

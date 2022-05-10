@@ -57,7 +57,6 @@ class EntradaCaderno3: UIViewController {
         //formatter
         let formatter = DateFormatter()
         formatter.dateStyle = .long
-        
         escolhaData.text = formatter.string(from: self.datePicker.date)
         self.view.endEditing(true)
         
@@ -92,7 +91,7 @@ class EntradaCaderno3: UIViewController {
             present(alert, animated: true)
                 return
             }
-            completion?(nota, campoAnotacao.text, data)
+            completion?(nota,data, campoAnotacao.text)
         }
     }
 
