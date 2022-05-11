@@ -36,16 +36,19 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func ler_livros(){
-        if let data = UserDefaults.standard.data(forKey: "itens") {
+        if let data = UserDefaults.standard.data(forKey: "itens2") {
             let array = try! PropertyListDecoder().decode([RegistroCaderno2].self, from: data)
             modelo = array
             
         }
+        
     }
+
+    
     
     func gravar_livros(){
         if let data = try? PropertyListEncoder().encode(self.modelo) {
-            UserDefaults.standard.set(data, forKey: "itens")
+            UserDefaults.standard.set(data, forKey: "itens2")
             
         }
     }
@@ -65,7 +68,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationController?.popViewController(animated: true)
             self.modelo.append(RegistroCaderno2(notaCaderno2: nota, dataCaderno2: data, anotacaoCaderno2: anotacao))
             if let data = try? PropertyListEncoder().encode(self.modelo) {
-                UserDefaults.standard.set(data, forKey: "itens")
+                UserDefaults.standard.set(data, forKey: "itens2")
             }
             UserDefaults.standard.synchronize()
         }
