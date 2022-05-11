@@ -21,6 +21,7 @@ class EntradaCaderno1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        donePressed()
         campoAnotacoes.layer.cornerRadius = 10
         campoNota.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(didTapSave))
@@ -92,6 +93,6 @@ class EntradaCaderno1: UIViewController {
             present(alert, animated: true)
                 return
             }
-            completion?(nota, campoAnotacoes.text, data)
+            completion?(nota, data, campoAnotacoes.text)
         }
 }

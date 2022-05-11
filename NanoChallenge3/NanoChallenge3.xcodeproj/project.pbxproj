@@ -16,6 +16,9 @@
 		55452DBF27FF653B00A2B6AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55452DBD27FF653B00A2B6AA /* LaunchScreen.storyboard */; };
 		5545F35F2829848200BF4DC6 /* RegistroCaderno3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545F35E2829848200BF4DC6 /* RegistroCaderno3.swift */; };
 		5545F361282B052500BF4DC6 /* RegistroCaderno2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545F360282B052500BF4DC6 /* RegistroCaderno2.swift */; };
+		5545F365282C2ED900BF4DC6 /* RegistroCaderno1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545F364282C2ED900BF4DC6 /* RegistroCaderno1.swift */; };
+		5545F368282C326A00BF4DC6 /* CustomCellCaderno1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545F366282C326A00BF4DC6 /* CustomCellCaderno1.swift */; };
+		5545F369282C326A00BF4DC6 /* CustomCellCaderno1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5545F367282C326A00BF4DC6 /* CustomCellCaderno1.xib */; };
 		55505CE12825AF1E00A92FAA /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55505CE02825AF1E00A92FAA /* Default.swift */; };
 		55505CEB2825BAA500A92FAA /* CustomCellCaderno2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55505CE92825BAA500A92FAA /* CustomCellCaderno2.swift */; };
 		55505CEC2825BAA500A92FAA /* CustomCellCaderno2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55505CEA2825BAA500A92FAA /* CustomCellCaderno2.xib */; };
@@ -43,6 +46,9 @@
 		55452DBE27FF653B00A2B6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5545F35E2829848200BF4DC6 /* RegistroCaderno3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroCaderno3.swift; sourceTree = "<group>"; };
 		5545F360282B052500BF4DC6 /* RegistroCaderno2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroCaderno2.swift; sourceTree = "<group>"; };
+		5545F364282C2ED900BF4DC6 /* RegistroCaderno1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroCaderno1.swift; sourceTree = "<group>"; };
+		5545F366282C326A00BF4DC6 /* CustomCellCaderno1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCaderno1.swift; sourceTree = "<group>"; };
+		5545F367282C326A00BF4DC6 /* CustomCellCaderno1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellCaderno1.xib; sourceTree = "<group>"; };
 		55505CE02825AF1E00A92FAA /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
 		55505CE92825BAA500A92FAA /* CustomCellCaderno2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCaderno2.swift; sourceTree = "<group>"; };
 		55505CEA2825BAA500A92FAA /* CustomCellCaderno2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellCaderno2.xib; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				558865E7280DEE41009759A9 /* Caderno1ViewController.swift */,
 				619357C4281B06ED00D5F373 /* EntradaCaderno1.swift */,
 				619357C6281B073C00D5F373 /* NoteViewController1.swift */,
+				5545F364282C2ED900BF4DC6 /* RegistroCaderno1.swift */,
+				5545F366282C326A00BF4DC6 /* CustomCellCaderno1.swift */,
+				5545F367282C326A00BF4DC6 /* CustomCellCaderno1.xib */,
 			);
 			path = Caderno1;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 				55505CEC2825BAA500A92FAA /* CustomCellCaderno2.xib in Resources */,
 				55452DBF27FF653B00A2B6AA /* LaunchScreen.storyboard in Resources */,
 				55452DBC27FF653B00A2B6AA /* Assets.xcassets in Resources */,
+				5545F369282C326A00BF4DC6 /* CustomCellCaderno1.xib in Resources */,
 				558E59DB2822FB9000BAB32E /* CustomCellCaderno3.xib in Resources */,
 				55452DBA27FF653500A2B6AA /* Main.storyboard in Resources */,
 			);
@@ -233,11 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0517E0EA2819D25F00E2379D /* CarouselCollectionViewCell.swift in Sources */,
+				5545F365282C2ED900BF4DC6 /* RegistroCaderno1.swift in Sources */,
 				61D06CD92819BA00008C2B32 /* NotaCaderno2.swift in Sources */,
 				5545F361282B052500BF4DC6 /* RegistroCaderno2.swift in Sources */,
 				55452DB727FF653500A2B6AA /* ViewController.swift in Sources */,
 				558865EA280E0544009759A9 /* Caderno2ViewController.swift in Sources */,
 				619357C5281B06ED00D5F373 /* EntradaCaderno1.swift in Sources */,
+				5545F368282C326A00BF4DC6 /* CustomCellCaderno1.swift in Sources */,
 				619357CD281B0ABD00D5F373 /* NotaCaderno3.swift in Sources */,
 				619357C7281B073C00D5F373 /* NoteViewController1.swift in Sources */,
 				55452DB327FF653500A2B6AA /* AppDelegate.swift in Sources */,

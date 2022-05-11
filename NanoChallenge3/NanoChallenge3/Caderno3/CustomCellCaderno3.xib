@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc0-2G-ekf">
-                                <rect key="frame" x="59" y="13" width="77" height="24"/>
+                                <rect key="frame" x="45" y="13" width="91" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,8 +32,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4w-6S-n4y">
-                                <rect key="frame" x="14" y="13" width="43" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4w-6S-n4y">
+                                <rect key="frame" x="14" y="13" width="25" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,13 +41,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CtO-N9-IPm" secondAttribute="bottom" constant="13" id="Es0-Bv-DWW"/>
                             <constraint firstAttribute="trailing" secondItem="CtO-N9-IPm" secondAttribute="trailing" constant="10" id="FvX-KC-Jou"/>
-                            <constraint firstItem="Bc0-2G-ekf" firstAttribute="leading" secondItem="A4w-6S-n4y" secondAttribute="trailing" constant="2" id="H6D-Y3-75B"/>
+                            <constraint firstItem="Bc0-2G-ekf" firstAttribute="leading" secondItem="A4w-6S-n4y" secondAttribute="trailing" constant="6" id="H6D-Y3-75B"/>
                             <constraint firstItem="A4w-6S-n4y" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="Led-G6-QoQ"/>
+                            <constraint firstAttribute="trailing" secondItem="CtO-N9-IPm" secondAttribute="trailing" constant="10" id="NRu-Dr-mxL"/>
                             <constraint firstAttribute="bottom" secondItem="Bc0-2G-ekf" secondAttribute="bottom" constant="13" id="Twn-N4-Zgb"/>
                             <constraint firstAttribute="bottom" secondItem="A4w-6S-n4y" secondAttribute="bottom" constant="13" id="hu8-gI-OWV"/>
                             <constraint firstItem="Bc0-2G-ekf" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="i9N-s8-gfd"/>
                             <constraint firstItem="CtO-N9-IPm" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="jBe-hZ-3mQ"/>
+                            <constraint firstItem="CtO-N9-IPm" firstAttribute="top" secondItem="RAs-JC-bXt" secondAttribute="top" constant="13" id="n4g-aL-tM0"/>
                             <constraint firstItem="CtO-N9-IPm" firstAttribute="leading" secondItem="Bc0-2G-ekf" secondAttribute="trailing" constant="101" id="xUp-ND-0Vj"/>
                             <constraint firstItem="A4w-6S-n4y" firstAttribute="leading" secondItem="RAs-JC-bXt" secondAttribute="leading" constant="14" id="zlR-xK-nO7"/>
                         </constraints>

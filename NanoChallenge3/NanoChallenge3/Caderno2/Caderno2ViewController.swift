@@ -19,8 +19,6 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     var modelo: [RegistroCaderno2] = []
     let dataPicker = UIDatePicker()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciar()

@@ -18,7 +18,7 @@ class NotaCaderno3: UIViewController {
     public var nota: String = ""
     public var anotacao: String = ""
     public var data: String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         campoData.text = data
@@ -27,7 +27,8 @@ class NotaCaderno3: UIViewController {
         Campodata.layer.cornerRadius = 10
         Anotacao.layer.cornerRadius = 10
         Acertos.layer.cornerRadius = 10
+        
+        
     }
-
-
+    
 }

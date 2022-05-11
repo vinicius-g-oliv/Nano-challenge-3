@@ -36,7 +36,7 @@
                                                     <color key="baseBackgroundColor" red="0.44705882352941173" green="0.76078431372549016" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="w4w-NN-uyp" kind="show" identifier="Linguagens e Códigos e Ciências Humanas Espanhol" id="WuL-fT-7FT"/>
+                                                    <segue destination="w4w-NN-uyp" kind="show" id="XW3-SL-D6N"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-0x-W5c" userLabel="btnCaderno2">
@@ -208,7 +208,7 @@ Inglês</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="50" estimatedRowHeight="9" sectionHeaderHeight="20" estimatedSectionHeaderHeight="20" sectionFooterHeight="18" estimatedSectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-4Q-V0k">
                                 <rect key="frame" x="0.0" y="164" width="414" height="637"/>
                                 <sections/>
                             </tableView>
@@ -224,7 +224,7 @@ Inglês</string>
                                 <rect key="frame" x="54" y="108" width="307" height="32"/>
                                 <segments>
                                     <segment title="Maior nota"/>
-                                    <segment title="Registro mais recente"/>
+                                    <segment title="Menor Nota"/>
                                 </segments>
                                 <connections>
                                     <action selector="Filter:" destination="nr3-aa-xjr" eventType="valueChanged" id="7nI-h5-Zld"/>
@@ -334,7 +334,7 @@ Inglês</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnf-qR-tpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3618.840579710145" y="45.535714285714285"/>
+            <point key="canvasLocation" x="3325" y="27"/>
         </scene>
         <!--Entrada Caderno1-->
         <scene sceneID="1d8-mU-pao">
@@ -412,7 +412,7 @@ Inglês</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyc-bd-0v6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3667" y="-860"/>
+            <point key="canvasLocation" x="3325" y="-860"/>
         </scene>
         <!--Note View Controller1-->
         <scene sceneID="FkO-V1-ln4">
@@ -467,6 +467,13 @@ Inglês</string>
                                     <constraint firstAttribute="trailing" secondItem="0fC-tq-u7e" secondAttribute="trailing" constant="325" id="ttP-TF-Mb1"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-KC-kWP">
+                                <rect key="frame" x="10" y="309" width="394" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xab-ww-PrS">
                                 <rect key="frame" x="10" y="220" width="394" height="39"/>
                                 <subviews>
@@ -479,35 +486,28 @@ Inglês</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="WBv-ij-44I" secondAttribute="bottom" constant="7" id="7pP-OO-qfQ"/>
-                                    <constraint firstItem="WBv-ij-44I" firstAttribute="top" secondItem="xab-ww-PrS" secondAttribute="top" constant="8" id="8J3-mG-Pse"/>
-                                    <constraint firstItem="WBv-ij-44I" firstAttribute="leading" secondItem="xab-ww-PrS" secondAttribute="leading" constant="8" id="brH-s0-gHw"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WBv-ij-44I" secondAttribute="trailing" constant="-880" id="kUe-vG-RaJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="WBv-ij-44I" secondAttribute="trailing" constant="284" id="0vG-vB-gGN"/>
+                                    <constraint firstItem="WBv-ij-44I" firstAttribute="leading" secondItem="xab-ww-PrS" secondAttribute="leading" constant="8" id="Ggc-qu-INn"/>
+                                    <constraint firstAttribute="bottom" secondItem="WBv-ij-44I" secondAttribute="bottom" constant="7" id="JGX-Sm-eln"/>
+                                    <constraint firstItem="WBv-ij-44I" firstAttribute="top" secondItem="xab-ww-PrS" secondAttribute="top" constant="8" id="z9z-Ed-2mv"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-KC-kWP">
-                                <rect key="frame" x="10" y="309" width="394" height="180"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="coA-zX-qyT"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="rNb-og-0vb" firstAttribute="leading" secondItem="coA-zX-qyT" secondAttribute="leading" constant="10" id="07A-ee-kQq"/>
                             <constraint firstItem="bSs-Bx-1se" firstAttribute="top" secondItem="Gb9-OW-Hv2" secondAttribute="bottom" constant="10" id="4gQ-Ql-zG9"/>
+                            <constraint firstItem="rNb-og-0vb" firstAttribute="top" secondItem="xab-ww-PrS" secondAttribute="bottom" constant="10" id="54v-Wc-VRA"/>
+                            <constraint firstItem="xab-ww-PrS" firstAttribute="leading" secondItem="coA-zX-qyT" secondAttribute="leading" constant="10" id="5yw-pG-fXp"/>
+                            <constraint firstItem="xab-ww-PrS" firstAttribute="top" secondItem="GAr-Lb-r1w" secondAttribute="bottom" constant="8" symbolic="YES" id="7jI-3V-enE"/>
                             <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="p9A-KC-kWP" secondAttribute="trailing" constant="10" id="EHS-eA-rvp"/>
-                            <constraint firstItem="xab-ww-PrS" firstAttribute="top" secondItem="GAr-Lb-r1w" secondAttribute="bottom" constant="8" symbolic="YES" id="Lha-38-enF"/>
                             <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="GAr-Lb-r1w" secondAttribute="trailing" constant="353" id="MYS-4d-Huf"/>
                             <constraint firstItem="p9A-KC-kWP" firstAttribute="top" secondItem="rNb-og-0vb" secondAttribute="bottom" constant="10" id="NJa-ZC-wrX"/>
                             <constraint firstItem="coA-zX-qyT" firstAttribute="bottom" secondItem="p9A-KC-kWP" secondAttribute="bottom" constant="373" id="R9B-i1-dST"/>
                             <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="rNb-og-0vb" secondAttribute="trailing" constant="288.5" id="VDb-EY-rKa"/>
                             <constraint firstItem="Gb9-OW-Hv2" firstAttribute="top" secondItem="coA-zX-qyT" secondAttribute="top" constant="50" id="VY3-dM-58J"/>
-                            <constraint firstItem="xab-ww-PrS" firstAttribute="leading" secondItem="coA-zX-qyT" secondAttribute="leading" constant="10" id="XGZ-pd-Nd8"/>
-                            <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="xab-ww-PrS" secondAttribute="trailing" constant="10" id="bLa-1C-yJZ"/>
-                            <constraint firstItem="rNb-og-0vb" firstAttribute="top" secondItem="xab-ww-PrS" secondAttribute="bottom" constant="10" id="eBb-Ck-YoA"/>
+                            <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="xab-ww-PrS" secondAttribute="trailing" constant="10" id="W4u-Ic-Mej"/>
                             <constraint firstItem="bSs-Bx-1se" firstAttribute="leading" secondItem="coA-zX-qyT" secondAttribute="leading" constant="10" id="hOR-HA-Xea"/>
                             <constraint firstItem="Gb9-OW-Hv2" firstAttribute="leading" secondItem="coA-zX-qyT" secondAttribute="leading" constant="10" id="hVq-MZ-5nC"/>
                             <constraint firstItem="coA-zX-qyT" firstAttribute="trailing" secondItem="Gb9-OW-Hv2" secondAttribute="trailing" constant="300" id="jM8-ve-9CB"/>
@@ -528,7 +528,7 @@ Inglês</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEG-Jy-ZwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4650.7246376811599" y="-860.49107142857144"/>
+            <point key="canvasLocation" x="4064" y="-860"/>
         </scene>
         <!--Nota Caderno2-->
         <scene sceneID="J0Y-kz-dHL">
@@ -644,7 +644,7 @@ Inglês</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sR8-jL-sMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4650.7246376811599" y="45.535714285714285"/>
+            <point key="canvasLocation" x="4064" y="27"/>
         </scene>
         <!--Caderno1-->
         <scene sceneID="CBm-OM-0z3">
@@ -654,24 +654,8 @@ Inglês</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-cV-3Ks">
-                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-Jf-pGq">
-                                <rect key="frame" x="0.0" y="139" width="414" height="662"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="20N-Vk-6qz">
-                                        <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="20N-Vk-6qz" id="Hbx-FT-hVc">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-Jf-pGq">
+                                <rect key="frame" x="0.0" y="154" width="414" height="647"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-Tw-8xc">
                                 <rect key="frame" x="10" y="811" width="394" height="31"/>
@@ -685,7 +669,7 @@ Inglês</string>
                                 <rect key="frame" x="54" y="98" width="307" height="32"/>
                                 <segments>
                                     <segment title="Maior nota"/>
-                                    <segment title="Registro mais recente"/>
+                                    <segment title="Menor Nota"/>
                                 </segments>
                                 <connections>
                                     <action selector="Filter:" destination="nr3-aa-xjr" eventType="valueChanged" id="E62-pA-5Z0"/>
@@ -696,12 +680,10 @@ Inglês</string>
                         <viewLayoutGuide key="safeArea" id="0TP-Le-FMa"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Ws9-cV-3Ks" firstAttribute="centerX" secondItem="GlR-4h-Vq1" secondAttribute="centerX" id="1Cq-vq-m7J"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="trailing" secondItem="zot-vv-W89" secondAttribute="trailing" constant="53" id="4gg-oN-FWj"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="trailing" secondItem="xIw-Jf-pGq" secondAttribute="trailing" id="BIV-0q-BA4"/>
-                            <constraint firstItem="Ws9-cV-3Ks" firstAttribute="centerY" secondItem="GlR-4h-Vq1" secondAttribute="centerY" id="E3i-0Y-jIK"/>
                             <constraint firstItem="5Wu-Tw-8xc" firstAttribute="leading" secondItem="0TP-Le-FMa" secondAttribute="leading" constant="10" id="Fz4-17-1lg"/>
-                            <constraint firstItem="xIw-Jf-pGq" firstAttribute="top" secondItem="zot-vv-W89" secondAttribute="bottom" constant="10" id="IZW-x8-ArB"/>
+                            <constraint firstItem="xIw-Jf-pGq" firstAttribute="top" secondItem="zot-vv-W89" secondAttribute="bottom" constant="25" id="IZW-x8-ArB"/>
                             <constraint firstItem="xIw-Jf-pGq" firstAttribute="leading" secondItem="0TP-Le-FMa" secondAttribute="leading" id="IxP-PB-G5f"/>
                             <constraint firstItem="zot-vv-W89" firstAttribute="top" secondItem="0TP-Le-FMa" secondAttribute="top" constant="10" id="eNK-S0-8RD"/>
                             <constraint firstItem="0TP-Le-FMa" firstAttribute="bottom" secondItem="5Wu-Tw-8xc" secondAttribute="bottom" constant="20" id="gqf-oT-oXX"/>
@@ -714,9 +696,7 @@ Inglês</string>
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="syC-PD-Uz0"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="Novoregistro" destination="5Wu-Tw-8xc" id="CNe-9d-pnB"/>
                         <outlet property="filtro" destination="zot-vv-W89" id="eUb-qP-NkJ"/>
-                        <outlet property="label" destination="Ws9-cV-3Ks" id="aHt-Qw-bbj"/>
                         <outlet property="table" destination="xIw-Jf-pGq" id="eJe-6Q-UfB"/>
                     </connections>
                 </viewController>

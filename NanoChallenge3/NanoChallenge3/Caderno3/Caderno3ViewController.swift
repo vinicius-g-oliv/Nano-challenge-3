@@ -19,30 +19,31 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     var modelo: [RegistroCaderno3] = []
     let dataPicker = UIDatePicker()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        iniciar()
+        ler_livros()
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
         table.delegate = self
         table.dataSource = self
         title = "Matemática e Ciências da Natureza"
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sortBasedOnSegmentPressed()
     }
     
+    
     func ler_livros(){
         if let data = UserDefaults.standard.data(forKey: "itens3") {
             let array = try! PropertyListDecoder().decode([RegistroCaderno3].self, from: data)
-                modelo = array
+            modelo = array
             
         }
-    
+        
     }
+
     
     func gravar_livros(){
         if let data = try? PropertyListEncoder().encode(self.modelo) {
@@ -55,7 +56,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         ler_livros()
         
     }
-
+    
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new3") as? EntradaCaderno3 else {
             return
@@ -86,8 +87,8 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno3", for: indexPath) as! CustomCellCaderno3
-  
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno3", for: indexPath) as! CustomCellCaderno3
+        
         cell.nota.text = modelo[indexPath.row].nota
         cell.data.text = modelo[indexPath.row].data
         

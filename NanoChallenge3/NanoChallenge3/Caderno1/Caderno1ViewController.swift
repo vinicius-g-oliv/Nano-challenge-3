@@ -9,33 +9,49 @@ import UIKit
 
 class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
+ 
     @IBOutlet weak var filtro: UISegmentedControl!
-    @IBOutlet weak var Novoregistro: UIButton!
     @IBOutlet var table: UITableView!
-    @IBOutlet var label: UILabel!
     @IBAction func Filter(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        sortBasedOnSegmentPressed()
-    }
-    
-    
-    
-    
-    var modelo: [(title: String, anotacao: String, btndata: String)] = []
+    var modelo: [RegistroCaderno1] = []
     let dataPicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
+        iniciar()
+        let nib  = UINib(nibName: "CustomCellCaderno1", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "CustomCellCaderno1")
         table.delegate = self
         table.dataSource = self
         title = "Linguagens Ciências Humanas Espanhol"
         
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        sortBasedOnSegmentPressed()
+    }
+    func ler_livros(){
+        if let data = UserDefaults.standard.data(forKey: "itens1") {
+            let array = try! PropertyListDecoder().decode([RegistroCaderno1].self, from: data)
+            modelo = array
+            
+        }
+        
+    }
+    
+    func gravar_livros(){
+        if let data = try? PropertyListEncoder().encode(self.modelo) {
+            UserDefaults.standard.set(data, forKey: "itens1")
+            
+        }
+    }
+    
+    func iniciar(){
+        ler_livros()
         
     }
     
@@ -45,13 +61,13 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.title = "Novo Resultado"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { nota, anotacao, data in
+        vc.completion = { nota, data, anotacao in
             self.navigationController?.popViewController(animated: true)
-            self.modelo.append((title: nota, anotacao: anotacao, btndata: data))
-            self.label.isHidden = true
-            self.table.isHidden = false
-            
-            self.table.reloadData()
+            self.modelo.append(RegistroCaderno1(notaCaderno1: nota,dataCaderno1: data, anotacaoCaderno1: anotacao))
+            if let data = try? PropertyListEncoder().encode(self.modelo) {
+                UserDefaults.standard.set(data, forKey: "itens1")
+            }
+            UserDefaults.standard.synchronize()
         }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -62,30 +78,18 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         let title = "Registros"
         return title
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return modelo.count
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        return view
+        return modelo.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
     }
-    func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaderno1", for: indexPath) as! CustomCellCaderno1
         
-        cell.textLabel?.text = modelo[indexPath.section].title
-        cell.detailTextLabel?.text = modelo[indexPath.section].anotacao
+        cell.nota.text = modelo[indexPath.row].notaCaderno1
+        cell.data.text = modelo[indexPath.row].dataCaderno1
         return cell
     }
     
@@ -93,7 +97,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = modelo[indexPath.section]
+        let modelo = modelo[indexPath.row]
         
         
         // Show note controller
@@ -102,45 +106,42 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Resultados"
-        vc.nota = model.title
-        vc.data = model.btndata
-        vc.anotacao = model.anotacao
+        vc.nota = modelo.notaCaderno1
+        vc.data = modelo.dataCaderno1
+        vc.anotacao = modelo.anotacaoCaderno1
         navigationController?.pushViewController(vc, animated: true)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        modelo.remove(at: indexPath.row)
+        gravar_livros()
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     //organizar
     func sortBasedOnSegmentPressed(){
         switch filtro.selectedSegmentIndex{
         case 0:
-            ordemNota()
+            ordemMaiorNota()
         case 1:
-            ordemData()
+            ordemMenorNota()
         default: print("erro")
         }
     }
     
     
-    func ordemNota(){
-        modelo.sort { $0.title > $1.title }
+    func ordemMaiorNota(){
+        modelo.sort { $0.notaCaderno1 > $1.notaCaderno1 }
         table.reloadData()
     }
-    func ordemData(){
-        modelo.sort { $0.btndata > $1.btndata }
+    func ordemMenorNota() {
+        modelo.sort { $0.notaCaderno1 < $1.notaCaderno1 }
         table.reloadData()
     }
     
-//    private func tableView(_ tableView: UITableViewCell, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        return .delete
-//    }
-//
-//    private func tableView(_ tableView: UITableViewCell,editingStyle: UITableViewCell.editingStyle, forRowAt indexPath:IndexPath){
-//        <#code#>
-//    }
-    //
     
     
     
 }
-
-
-
-

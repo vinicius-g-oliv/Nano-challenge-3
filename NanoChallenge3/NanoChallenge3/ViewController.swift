@@ -23,7 +23,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         collectionView.dataSource = self
         pageControl.numberOfPages = imgCar.count
-        
       
         startTimer()
         title = "E-volução"
