@@ -75,6 +75,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(vc, animated: true)
     }
     // Table
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let title = "Registros"
         return title

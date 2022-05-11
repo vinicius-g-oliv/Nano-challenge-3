@@ -8,7 +8,10 @@
 import UIKit
 
 class NotaCaderno3: UIViewController {
-    
+    override func viewWillAppear(_ animated: Bool) {
+        campoAnotacao.text = anotacao
+        print(anotacao)
+    }
     @IBOutlet var campoNota: UILabel!
     @IBOutlet var campoAnotacao: UITextView!
     @IBOutlet weak var campoData: UILabel!
@@ -27,8 +30,17 @@ class NotaCaderno3: UIViewController {
         Campodata.layer.cornerRadius = 10
         Anotacao.layer.cornerRadius = 10
         Acertos.layer.cornerRadius = 10
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(didTapSave))
         
         
     }
+    @objc func didTapSave() -> String {
+        let teste = campoAnotacao.text
+        anotacao = teste!
+        return anotacao
+    }
+        
     
 }
+    
+    

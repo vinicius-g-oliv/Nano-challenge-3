@@ -73,7 +73,9 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // Table
-    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        return
+    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let title = "Registros"
         return title
