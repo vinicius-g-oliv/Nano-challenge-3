@@ -26,14 +26,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSd-Xl-usn">
-                                <rect key="frame" x="42" y="13" width="35" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="/ 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSd-Xl-usn">
+                                <rect key="frame" x="42" y="13" width="101" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="31/12/9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jc-R2-hfL">
-                                <rect key="frame" x="230" y="13" width="101" height="24"/>
+                                <rect key="frame" x="244" y="13" width="101" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,11 +46,11 @@
                             <constraint firstAttribute="bottom" secondItem="Hhq-hX-9JC" secondAttribute="bottom" constant="13" id="6MF-y3-61I"/>
                             <constraint firstAttribute="bottom" secondItem="7jc-R2-hfL" secondAttribute="bottom" constant="13" id="Ehh-LG-o2W"/>
                             <constraint firstItem="7jc-R2-hfL" firstAttribute="top" secondItem="KPf-Od-kqN" secondAttribute="top" constant="13" id="LOC-6e-XHa"/>
-                            <constraint firstItem="7jc-R2-hfL" firstAttribute="leading" secondItem="uSd-Xl-usn" secondAttribute="trailing" constant="153" id="M9l-No-KjA"/>
+                            <constraint firstItem="7jc-R2-hfL" firstAttribute="leading" secondItem="uSd-Xl-usn" secondAttribute="trailing" constant="101" id="M9l-No-KjA"/>
                             <constraint firstAttribute="bottom" secondItem="uSd-Xl-usn" secondAttribute="bottom" constant="13" id="QVm-Qq-7MZ"/>
                             <constraint firstItem="uSd-Xl-usn" firstAttribute="top" secondItem="KPf-Od-kqN" secondAttribute="top" constant="13" id="Rlv-s3-fAq"/>
                             <constraint firstItem="Hhq-hX-9JC" firstAttribute="top" secondItem="KPf-Od-kqN" secondAttribute="top" constant="13" id="m4G-Mr-Iik"/>
-                            <constraint firstAttribute="trailing" secondItem="7jc-R2-hfL" secondAttribute="trailing" constant="24" id="rK5-RB-fVf"/>
+                            <constraint firstAttribute="trailing" secondItem="7jc-R2-hfL" secondAttribute="trailing" constant="10" id="rK5-RB-fVf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -66,7 +66,7 @@
                 <outlet property="fundo" destination="KPf-Od-kqN" id="5Vw-o0-Ypq"/>
                 <outlet property="nota" destination="Hhq-hX-9JC" id="PEb-6d-gW7"/>
             </connections>
-            <point key="canvasLocation" x="131.15942028985509" y="96.428571428571431"/>
+            <point key="canvasLocation" x="3920" y="114"/>
         </tableViewCell>
     </objects>
     <resources>

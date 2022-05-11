@@ -69,7 +69,7 @@
                 <outlet property="fundo" destination="RAs-JC-bXt" id="qZp-7d-HXN"/>
                 <outlet property="nota" destination="A4w-6S-n4y" id="lrA-UH-ajp"/>
             </connections>
-            <point key="canvasLocation" x="163.04347826086959" y="79.6875"/>
+            <point key="canvasLocation" x="28" y="9"/>
         </tableViewCell>
     </objects>
     <resources>
