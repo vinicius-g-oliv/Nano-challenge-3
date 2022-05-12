@@ -8,7 +8,7 @@
 import UIKit
 
 protocol atualizarRegistro{
-    func execute(_ anotacao: String, indice: Int)
+    func execute(_ anotacao: String, _ indice: Int)
 }
 
 class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,atualizarRegistro {
@@ -132,7 +132,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     
-    func execute(_ anotacao: String, indice: Int) {
+    func execute(_ anotacao: String, _ indice: Int) {
         modelo[indice].salvarAnotacao = anotacao
         gravarRegistros(modelo)
         table.reloadData()

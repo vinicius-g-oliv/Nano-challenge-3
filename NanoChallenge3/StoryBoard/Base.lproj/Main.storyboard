@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q4a-NY-2AP">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -170,7 +170,7 @@ Inglês</string>
                             <constraint firstItem="879-gt-0o2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zB5-1i-W9D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0HH-QB-snq"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="0HH-QB-snq"/>
                     <connections>
                         <outlet property="btnCaderno1" destination="cWE-dF-e2M" id="rnm-XC-VOF"/>
                         <outlet property="btnCaderno2" destination="hb0-0x-W5c" id="Ngh-R7-T56"/>
@@ -712,7 +712,7 @@ Inglês</string>
         <!--Caderno3 View Controller-->
         <scene sceneID="NKo-Td-eYJ">
             <objects>
-                <viewController id="8Kv-EU-wCP" customClass="Caderno3ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3" modalPresentationStyle="fullScreen" id="8Kv-EU-wCP" customClass="Caderno3ViewController" customModule="NanoChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAP-2W-Dic">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

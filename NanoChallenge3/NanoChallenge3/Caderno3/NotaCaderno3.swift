@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 class NotaCaderno3: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         campoAnotacao.text = anotacao
@@ -34,13 +34,20 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
         Campodata.layer.cornerRadius = 10
         Anotacao.layer.cornerRadius = 10
         Acertos.layer.cornerRadius = 10
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(didTapSave))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Atualizar", style: .bordered, target: self, action: #selector(didTapSave))
      
     }
   
-   
+  
     @objc func didTapSave() {
-        delegate?.execute(campoAnotacao.text ?? "", indice: indice)
+
+        delegate?.execute(campoAnotacao.text ?? "", indice)
+        let alert = UIAlertController(title: "Atualização", message: "Os dados foram atualizados ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true)
+            return
+        
+        
     }
 
 }
