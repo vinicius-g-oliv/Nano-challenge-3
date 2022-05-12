@@ -289,6 +289,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clique para preencher a data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-W2-l73">
                                 <rect key="frame" x="10" y="200" width="394" height="34"/>
@@ -373,11 +374,12 @@ Inglês</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-N7-Qqu">
-                                <rect key="frame" x="10" y="281" width="394" height="180"/>
+                                <rect key="frame" x="10" y="279" width="394" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jd6-Mx-05Z"/>
@@ -396,9 +398,9 @@ Inglês</string>
                             <constraint firstItem="dBq-DB-s6S" firstAttribute="leading" secondItem="jd6-Mx-05Z" secondAttribute="leading" constant="10" id="Uf6-Qb-C5R"/>
                             <constraint firstItem="jd6-Mx-05Z" firstAttribute="trailing" secondItem="dCh-Aw-xLF" secondAttribute="trailing" constant="295" id="WLQ-HR-yOm"/>
                             <constraint firstItem="f5z-N7-Qqu" firstAttribute="leading" secondItem="jd6-Mx-05Z" secondAttribute="leading" constant="10" id="ZOK-SF-DRW"/>
-                            <constraint firstItem="jd6-Mx-05Z" firstAttribute="bottom" secondItem="f5z-N7-Qqu" secondAttribute="bottom" constant="401" id="b1n-Yk-tSz"/>
+                            <constraint firstItem="jd6-Mx-05Z" firstAttribute="bottom" secondItem="f5z-N7-Qqu" secondAttribute="bottom" constant="403" id="b1n-Yk-tSz"/>
                             <constraint firstItem="dCh-Aw-xLF" firstAttribute="top" secondItem="jd6-Mx-05Z" secondAttribute="top" constant="38" id="cxo-iL-MEj"/>
-                            <constraint firstItem="f5z-N7-Qqu" firstAttribute="top" secondItem="aNw-He-iBa" secondAttribute="bottom" constant="10" id="qFb-w8-bHy"/>
+                            <constraint firstItem="f5z-N7-Qqu" firstAttribute="top" secondItem="aNw-He-iBa" secondAttribute="bottom" constant="8" id="qFb-w8-bHy"/>
                             <constraint firstItem="aNw-He-iBa" firstAttribute="top" secondItem="9co-qm-jHu" secondAttribute="bottom" constant="10" id="uCH-OF-Zfi"/>
                             <constraint firstItem="dBq-DB-s6S" firstAttribute="top" secondItem="dCh-Aw-xLF" secondAttribute="bottom" constant="5" id="v84-yL-lZW"/>
                             <constraint firstItem="9co-qm-jHu" firstAttribute="leading" secondItem="jd6-Mx-05Z" secondAttribute="leading" constant="10" id="vda-4G-Xht"/>
@@ -472,7 +474,8 @@ Inglês</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xab-ww-PrS">
                                 <rect key="frame" x="10" y="220" width="394" height="40"/>
@@ -488,7 +491,7 @@ Inglês</string>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="WBv-ij-44I" secondAttribute="bottom" constant="8" id="Eww-hb-g9l"/>
                                     <constraint firstItem="WBv-ij-44I" firstAttribute="top" secondItem="xab-ww-PrS" secondAttribute="top" constant="8" id="beu-74-YZ5"/>
-                                    <constraint firstAttribute="trailing" secondItem="WBv-ij-44I" secondAttribute="trailing" constant="167" id="sgj-Pd-8GI"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WBv-ij-44I" secondAttribute="trailing" symbolic="YES" id="sgj-Pd-8GI"/>
                                     <constraint firstItem="WBv-ij-44I" firstAttribute="leading" secondItem="xab-ww-PrS" secondAttribute="leading" constant="8" id="zWN-Ys-bbG"/>
                                 </constraints>
                             </view>
@@ -608,6 +611,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WYS-Wd-3NG"/>
@@ -805,6 +809,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ioh-kI-eWG"/>
@@ -920,6 +925,7 @@ Inglês</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rdY-SG-LGJ"/>

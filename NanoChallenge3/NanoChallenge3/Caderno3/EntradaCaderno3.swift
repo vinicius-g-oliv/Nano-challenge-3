@@ -25,7 +25,6 @@ class EntradaCaderno3: UIViewController {
         campoNota.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .plain, target: self, action: #selector(didTapSave))
         createDatePicker()
-        
     }
     func createDatePicker(){
         

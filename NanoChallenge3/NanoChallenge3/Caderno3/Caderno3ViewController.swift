@@ -21,7 +21,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ler_livros()
+        salvarRegistros()
         let nib  = UINib(nibName: "CustomCellCaderno3", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno3")
         table.delegate = self
@@ -35,7 +35,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    func ler_livros(){
+    func salvarRegistros(){
         if let data = UserDefaults.standard.data(forKey: "itens3") {
             let array = try! PropertyListDecoder().decode([RegistroCaderno3].self, from: data)
             modelo = array
@@ -53,7 +53,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func iniciar(){
-        ler_livros()
+        salvarRegistros()
         
     }
     
