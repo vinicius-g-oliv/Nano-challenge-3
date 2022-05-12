@@ -21,8 +21,8 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
     public var nota: String = ""
     public var anotacao: String = ""
     public var data: String = ""
-    
-    public var completion: ((String, String, String) -> Void)?
+    public var indice: Int = 0
+    public var delegate: atualizarRegistro?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +40,9 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
   
    
     @objc func didTapSave() {
-        
-     
-    
-        }
-
+        delegate?.execute(campoAnotacao.text ?? "", indice: indice)
     }
+
+}
     
 

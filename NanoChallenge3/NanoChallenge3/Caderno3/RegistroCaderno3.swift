@@ -19,3 +19,19 @@ struct RegistroCaderno3 : Codable {
     
     }
 }
+
+func lerRegistros() -> [RegistroCaderno3]{
+    if let data = UserDefaults.standard.data(forKey: "itens3") {
+        let array = try! PropertyListDecoder().decode([RegistroCaderno3].self, from: data)
+        return array
+    }
+    return []
+    
+}
+
+func gravarRegistros(_ modelo: [RegistroCaderno3]){
+    if let data = try? PropertyListEncoder().encode(modelo) {
+        UserDefaults.standard.set(data, forKey: "itens3")
+        
+    }
+}
