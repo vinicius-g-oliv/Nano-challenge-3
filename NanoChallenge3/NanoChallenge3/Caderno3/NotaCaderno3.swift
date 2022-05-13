@@ -34,7 +34,7 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
         Campodata.layer.cornerRadius = 10
         Anotacao.layer.cornerRadius = 10
         Acertos.layer.cornerRadius = 10
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Atualizar", style: .bordered, target: self, action: #selector(didTapSave))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Atualizar", style: .done, target: self, action: #selector(didTapSave))
      
     }
   
