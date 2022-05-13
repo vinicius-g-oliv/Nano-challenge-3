@@ -7,14 +7,12 @@
 
 import UIKit
 
-protocol atualizarRegistro{
-    func execute(_ anotacao: String, _ indice: Int)
+protocol atualizarRegistroCaderno3{
+    func atualizar(_ anotacao: String, _ indice: Int)
 }
 
-class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,atualizarRegistro {
+class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,atualizarRegistroCaderno3 {
 
-    
-    
     
     @IBOutlet var table: UITableView!
     @IBOutlet weak var filtro: UISegmentedControl!
@@ -132,7 +130,7 @@ class Caderno3ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     
-    func execute(_ anotacao: String, _ indice: Int) {
+    func atualizar(_ anotacao: String, _ indice: Int) {
         modelo[indice].salvarAnotacao = anotacao
         gravarRegistros(modelo)
         table.reloadData()

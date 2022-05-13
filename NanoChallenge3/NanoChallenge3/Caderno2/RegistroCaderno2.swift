@@ -15,6 +15,19 @@ struct RegistroCaderno2 : Codable {
         self.notaCaderno2 = notaCaderno2
         self.dataCaderno2 = dataCaderno2
         self.anotacaoCaderno2 = anotacaoCaderno2
+        
+    }
+}
     
+func lerRegistro2() -> [RegistroCaderno2] {
+    if let data = UserDefaults.standard.data(forKey: "itens2") {
+        let array = try! PropertyListDecoder().decode([RegistroCaderno2].self, from: data)
+        return array
+}
+    return []
+}
+func gravarRegistro2(_ modelo: [RegistroCaderno2]) {
+    if let data = try? PropertyListEncoder().encode(modelo) {
+        UserDefaults.standard.set(data, forKey: "itens2")
     }
 }

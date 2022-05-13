@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 struct RegistroCaderno1: Codable {
     var notaCaderno1 : String
     var dataCaderno1 : String
@@ -15,5 +15,19 @@ struct RegistroCaderno1: Codable {
         self.notaCaderno1 = notaCaderno1
         self.dataCaderno1 = dataCaderno1
         self.anotacaoCaderno1 = anotacaoCaderno1
+    }
+    
+}
+func lerRegistros1() -> [RegistroCaderno1]{
+    if let data = UserDefaults.standard.data(forKey: "itens1") {
+        let array = try! PropertyListDecoder().decode([RegistroCaderno1].self, from: data)
+        return array
+    }
+    return []
+}
+func gravarRegistro1(_ modelo: [RegistroCaderno1]){
+    if let data = try? PropertyListEncoder().encode(modelo) {
+        UserDefaults.standard.set(data, forKey: "itens1")
+        
     }
 }

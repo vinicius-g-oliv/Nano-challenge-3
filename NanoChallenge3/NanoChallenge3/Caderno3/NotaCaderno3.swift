@@ -6,12 +6,8 @@
 //
 
 import UIKit
-let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
 class NotaCaderno3: UIViewController, UITextViewDelegate {
-    override func viewWillAppear(_ animated: Bool) {
-        campoAnotacao.text = anotacao
-        print(anotacao)
-    }
     @IBOutlet var campoNota: UILabel!
     @IBOutlet var campoAnotacao: UITextView!
     @IBOutlet weak var campoData: UILabel!
@@ -22,7 +18,7 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
     public var anotacao: String = ""
     public var data: String = ""
     public var indice: Int = 0
-    public var delegate: atualizarRegistro?
+    public var delegate: atualizarRegistroCaderno3?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +37,14 @@ class NotaCaderno3: UIViewController, UITextViewDelegate {
   
     @objc func didTapSave() {
 
-        delegate?.execute(campoAnotacao.text ?? "", indice)
-        let alert = UIAlertController(title: "Atualização", message: "Os dados foram atualizados ", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        delegate?.atualizar(campoAnotacao.text ?? "", indice)
+        let alert = UIAlertController(title: "Atualização", message: "Os dados foram atualizados", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {_ in
+            self.navigationController?.popViewController(animated: true)
+        }))
         present(alert, animated: true)
-            return
+       
+        return
         
         
     }

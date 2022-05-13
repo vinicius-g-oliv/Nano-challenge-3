@@ -7,7 +7,13 @@
 
 import UIKit
 
-class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol atualizarRegistroCaderno1{
+    func atualizar1(_ anotacao: String, _ indice: Int)
+}
+
+
+class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, atualizarRegistroCaderno1 {
+    
     
  
     @IBOutlet weak var filtro: UISegmentedControl!
@@ -21,7 +27,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iniciar()
+        modelo = lerRegistros1()
         let nib  = UINib(nibName: "CustomCellCaderno1", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno1")
         table.delegate = self
@@ -34,27 +40,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         sortBasedOnSegmentPressed()
     }
-    func ler_livros(){
-        if let data = UserDefaults.standard.data(forKey: "itens1") {
-            let array = try! PropertyListDecoder().decode([RegistroCaderno1].self, from: data)
-            modelo = array
-            
-        }
-        
-    }
-    
-    func gravar_livros(){
-        if let data = try? PropertyListEncoder().encode(self.modelo) {
-            UserDefaults.standard.set(data, forKey: "itens1")
-            
-        }
-    }
-    
-    func iniciar(){
-        ler_livros()
-        
-    }
-    
+
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new1") as? EntradaCaderno1 else {
             return
@@ -111,6 +97,8 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         vc.nota = modelo.notaCaderno1
         vc.data = modelo.dataCaderno1
         vc.anotacao = modelo.anotacaoCaderno1
+        vc.indice = indexPath.row
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,7 +107,7 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         modelo.remove(at: indexPath.row)
-        gravar_livros()
+        gravarRegistro1(modelo)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     //organizar
@@ -143,7 +131,10 @@ class Caderno1ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     
-    
-    
-    
-}
+    func atualizar1(_ anotacao: String, _ indice: Int) {
+        modelo[indice].anotacaoCaderno1 = anotacao
+        gravarRegistro1(modelo)
+        table.reloadData()
+    }
+    }
+

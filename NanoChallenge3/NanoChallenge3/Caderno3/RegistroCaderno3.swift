@@ -16,7 +16,7 @@ struct RegistroCaderno3 : Codable {
         self.nota = nota
         self.data = data
         self.salvarAnotacao = salvarAnotacao
-    
+        
     }
 }
 

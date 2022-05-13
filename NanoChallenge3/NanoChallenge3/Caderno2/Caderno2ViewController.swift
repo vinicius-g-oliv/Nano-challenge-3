@@ -7,7 +7,13 @@
 
 import UIKit
 
-class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol atualizarRegistroCaderno2{
+    func atualizar2(_ anotacao: String, _ indice: Int)
+}
+
+class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, atualizarRegistroCaderno2 {
+    
+    
     
     
     @IBOutlet var table: UITableView!
@@ -21,7 +27,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iniciar()
+        modelo = lerRegistro2()
         let nib  = UINib(nibName: "CustomCellCaderno2", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomCellCaderno2")
         table.delegate = self
@@ -33,28 +39,6 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         sortBasedOnSegmentPressed()
     }
     
-    func ler_livros(){
-        if let data = UserDefaults.standard.data(forKey: "itens2") {
-            let array = try! PropertyListDecoder().decode([RegistroCaderno2].self, from: data)
-            modelo = array
-            
-        }
-        
-    }
-
-    
-    
-    func gravar_livros(){
-        if let data = try? PropertyListEncoder().encode(self.modelo) {
-            UserDefaults.standard.set(data, forKey: "itens2")
-            
-        }
-    }
-    
-    func iniciar(){
-        ler_livros()
-        
-    }
     
     @IBAction func didTapNewNote() {
         guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntradaCaderno2 else {
@@ -96,7 +80,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let modelo = modelo[indexPath.row]
+        
         
         // Show note controller
         guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NotaCaderno2 else {
@@ -104,9 +88,11 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Resultados"
-        vc.nota = modelo.notaCaderno2
-        vc.data = modelo.dataCaderno2
-        vc.anotacao = modelo.anotacaoCaderno2
+        vc.nota = modelo[indexPath.row].notaCaderno2
+        vc.data = modelo[indexPath.row].dataCaderno2
+        vc.anotacao = modelo[indexPath.row].anotacaoCaderno2
+        vc.indice = indexPath.row
+        vc.delegate = self
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -117,7 +103,7 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         modelo.remove(at: indexPath.row)
-        gravar_livros()
+        gravarRegistro2(modelo)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
@@ -142,6 +128,11 @@ class Caderno2ViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     
+    func atualizar2(_ anotacao: String, _ indice: Int) {
+        modelo[indice].anotacaoCaderno2 = anotacao
+        gravarRegistro2(modelo)
+        table.reloadData()
+    }
     
 }
 
