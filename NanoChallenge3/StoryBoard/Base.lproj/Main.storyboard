@@ -247,7 +247,7 @@ Inglês</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="pfP-lo-SLp">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="g2R-uq-wff"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="ttz-ag-VLy"/>
                     </navigationItem>
                     <connections>
                         <outlet property="filtro" destination="rFn-Kc-lLW" id="sAk-M6-Cvw"/>
@@ -698,7 +698,7 @@ Inglês</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iGW-D3-yhY">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="syC-PD-Uz0"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="w85-cP-EC3"/>
                     </navigationItem>
                     <connections>
                         <outlet property="filtro" destination="zot-vv-W89" id="eUb-qP-NkJ"/>
@@ -756,7 +756,7 @@ Inglês</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ua5-hD-QHb">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="0kn-2J-ZJM"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="eaa-FS-64c"/>
                     </navigationItem>
                     <connections>
                         <outlet property="filtro" destination="KQO-tt-UTH" id="q8j-BQ-9bS"/>
