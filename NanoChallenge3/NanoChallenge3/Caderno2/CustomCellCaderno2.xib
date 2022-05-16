@@ -33,7 +33,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7Z-5C-h0j">
-                                <rect key="frame" x="57" y="13" width="47" height="24"/>
+                                <rect key="frame" x="55" y="13" width="47" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="Rdi-BV-xlP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,16 +44,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="y7Z-5C-h0j" firstAttribute="leading" secondItem="Mub-Gf-Kr6" secondAttribute="trailing" constant="4" id="8Fn-bi-b7C"/>
+                            <constraint firstItem="y7Z-5C-h0j" firstAttribute="baseline" secondItem="Mub-Gf-Kr6" secondAttribute="baseline" id="5hI-ZN-PrV"/>
                             <constraint firstItem="wON-dd-bHm" firstAttribute="top" secondItem="Dry-Rk-Vvk" secondAttribute="top" constant="13" id="CEm-eg-wbP"/>
                             <constraint firstAttribute="trailing" secondItem="wON-dd-bHm" secondAttribute="trailing" constant="10" id="E66-W4-ty0"/>
-                            <constraint firstAttribute="bottom" secondItem="y7Z-5C-h0j" secondAttribute="bottom" constant="13" id="MxG-wH-0q3"/>
                             <constraint firstAttribute="bottom" secondItem="wON-dd-bHm" secondAttribute="bottom" constant="13" id="SmU-T0-JHf"/>
                             <constraint firstItem="Mub-Gf-Kr6" firstAttribute="top" secondItem="Dry-Rk-Vvk" secondAttribute="top" constant="13" id="UnL-Jq-Ojd"/>
                             <constraint firstItem="Mub-Gf-Kr6" firstAttribute="leading" secondItem="Dry-Rk-Vvk" secondAttribute="leading" constant="14" id="aBX-5v-aOr"/>
-                            <constraint firstItem="y7Z-5C-h0j" firstAttribute="top" secondItem="Dry-Rk-Vvk" secondAttribute="top" constant="13" id="aFr-yX-PK9"/>
-                            <constraint firstItem="wON-dd-bHm" firstAttribute="leading" secondItem="y7Z-5C-h0j" secondAttribute="trailing" constant="133" id="jWM-GC-aA4"/>
                             <constraint firstAttribute="bottom" secondItem="Mub-Gf-Kr6" secondAttribute="bottom" constant="13" id="ozj-mp-iRE"/>
+                            <constraint firstItem="y7Z-5C-h0j" firstAttribute="leading" secondItem="Mub-Gf-Kr6" secondAttribute="trailing" constant="2" id="pfZ-pv-fFT"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -67,7 +68,7 @@
                 <outlet property="fundo" destination="Dry-Rk-Vvk" id="TdL-Ve-C9O"/>
                 <outlet property="nota" destination="Mub-Gf-Kr6" id="hVX-I8-xdf"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+            <point key="canvasLocation" x="136.95652173913044" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>

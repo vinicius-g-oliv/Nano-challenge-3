@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     
     func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
     }
     
     @objc func moveToNextIndex(){
